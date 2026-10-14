@@ -1,4 +1,17 @@
+# Generated Hugo output and caches
 /public/
 /resources/
-.hugo_build.lock
+/.hugo_build.lock
+/.hugo_cache/
+
+# macOS metadata
 .DS_Store
+._*
+
+# Local editor settings; keep shared extension recommendations
+/.vscode/*
+!/.vscode/extensions.json
+/.idea/
+*.swp
+*.swo
+*~
