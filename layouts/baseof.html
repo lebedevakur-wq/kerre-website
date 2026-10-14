@@ -7,7 +7,7 @@
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-{{ $css := resources.Get "css/kerre.css" | minify | fingerprint }}
+{{ $css := resources.Get "css/kerre.css" | resources.ExecuteAsTemplate "css/kerre.css" . | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 <script>document.documentElement.classList.add("js");</script>
 {{ hugo.Generator }}

@@ -1,4 +1,7 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://lebedevakur-wq.github.io/kerre-website/'
 languageCode = 'en-us'
 title = 'Welcome to Kerre'
 theme = 'ananke'
+
+[caches.images]
+dir = ':cacheDir/images'
