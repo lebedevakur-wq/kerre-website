@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}Kris Kerremans — Kerre</title>
+<meta name="description" content="{{ .Description | default "Kris Kerremans — entrepreneur, founder and angel investor based in Antwerp, Belgium." }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{{ $css := resources.Get "css/kerre.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<script>document.documentElement.classList.add("js");</script>
+{{ hugo.Generator }}
+{{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="Kerre">{{ end }}
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+{{ partial "kerre/nav.html" . }}
+<main id="main">{{ block "main" . }}{{ end }}</main>
+{{ partial "kerre/footer.html" . }}
+<script>
+const toggle = document.querySelector('.toggle');
+const navigation = document.getElementById('navlinks');
+toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); navigation.classList.toggle('open', open); });
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { navigation.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.focus(); } });
+</script></body></html>

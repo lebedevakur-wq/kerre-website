@@ -1,0 +1,184 @@
+
+:root{--ink:#132b30;--muted:#657375;--paper:#f8f8f4;--white:#fff;--teal:#ccebe1;--acid:#d9f66c;--line:#dde3df;--dark:#122d2e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:15px;line-height:1.7}
+h1,h2,h3,h4,p{margin-top:0}
+h1,h2,h3{font-family:Manrope,Arial,sans-serif;line-height:1.14;letter-spacing:-.045em}
+h1{font-size:clamp(46px,6.3vw,100px);font-weight:600}
+h2{font-size:clamp(36px,4.6vw,67px);font-weight:600}
+h3{font-size:clamp(23px,2.3vw,32px);font-weight:600}
+p{color:#566568}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.shell{max-width:1440px;margin:auto}
+.nav{background:#f8f8f4;position:sticky;top:0;z-index:10;border-bottom:1px solid #e7eae6}
+.navin{height:86px;max-width:1440px;padding:0 5.3%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{font-family:Manrope;font-size:19px;font-weight:800;letter-spacing:-.07em;color:var(--ink);cursor:pointer;white-space:nowrap}
+.logo span{color:#66998b}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlink{border:0;background:transparent;color:#667274;font-size:12px;font-weight:600;padding:12px 0}
+.navlink:hover,.navlink.selected{color:#0c3031}
+.navlink.selected{box-shadow:inset 0 -2px #1e5b50}
+.contact-btn,.btn{border-radius:3px;padding:16px 23px;background:var(--ink);color:#fff;border:1px solid var(--ink);display:inline-flex;align-items:center;gap:24px;justify-content:space-between;font-size:12px;font-weight:700;transition:.2s}
+.contact-btn:hover,.btn:hover{background:#29615a}
+.btn.light{background:#fff;color:var(--ink);border-color:#fff}
+.btn.outline{background:transparent;color:var(--ink);border-color:#bac8c4}
+.btn.outline:hover{background:#e4f0ea}
+.toggle{display:none;background:none;border:0;font-size:25px}
+.page{display:none}
+.page.active{display:block}
+.container{max-width:1210px;padding:0 36px;margin:auto}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.19em;font-weight:800;color:#568378;margin-bottom:24px}
+.eyebrow.light-eyebrow{color:#b5d4c8}
+.hero{margin:22px 2.1% 0;min-height:690px;border-radius:5px;overflow:hidden;position:relative;background:#153a38;display:flex;align-items:center}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,34,34,.91) 3%,rgba(10,34,34,.77) 46%,rgba(10,34,34,.08) 100%),url('/images/antwerp-office.jpg') center/cover}
+.hero .inside{position:relative;padding:90px 7%;max-width:900px;color:#fff}
+.hero h1{max-width:850px}
+.hero h1 em{color:#d7f48a;font-style:normal}
+.hero p{max-width:550px;color:#d7e0d9;font-size:17px;margin-bottom:34px}
+.hero-foot{position:absolute;bottom:29px;left:7%;right:5%;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.1em;color:#e2eae6}
+.section{padding:110px 0}
+.section.soft{background:#edf1ed}
+.section.dark{background:#112e2e;color:white}
+.section.dark p{color:#bdd0cb}
+.split{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:90px}
+.split .photo{width:100%;aspect-ratio:4/4.2;object-fit:cover;border-radius:3px}
+.copy p{font-size:16px;max-width:550px}
+.lead{font-size:19px!important;line-height:1.8}
+.wide-intro{max-width:760px}
+.meta{display:flex;gap:32px;flex-wrap:wrap;margin-top:48px}
+.metric strong{font:600 42px Manrope;display:block;letter-spacing:-.07em}
+.metric span{color:var(--muted);font-size:12px}
+.line{height:1px;background:var(--line);margin:25px 0}
+.topline{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:48px}
+.topline h2{margin-bottom:0;max-width:700px}
+.topline p{max-width:350px;margin-bottom:0}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.principle{border:1px solid #dce3df;padding:40px 29px;background:#f8f8f4;min-height:280px}
+.principle span{color:#579486;font-size:13px}
+.principle h3{margin:51px 0 12px}
+.principle p{font-size:14px}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.portfolio-card{background:#fff;min-height:370px;display:flex;flex-direction:column;border:1px solid #e5eae7}
+.portfolio-pic{height:170px;background:#d9e4dd;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.portfolio-pic img{width:100%;height:100%;object-fit:cover;filter:saturate(.75)}
+.card-tag{position:absolute;top:14px;left:14px;background:#f8f8f4;padding:7px 10px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.portfolio-body{padding:26px;flex:1}
+.portfolio-body h3{font-size:25px;margin-bottom:10px}
+.portfolio-body p{font-size:13px}
+.arrow{font-size:23px;color:#267466}
+.quote-block{padding:105px 8%;background:#d9eddf;position:relative}
+.quote-block blockquote{max-width:1000px;font:500 clamp(27px,4vw,51px)/1.35 Manrope;letter-spacing:-.045em;margin:0}
+.quote-block small{display:block;margin-top:25px;color:#63766b;font-size:12px}
+.footer{background:#0f292b;color:white;padding:85px 0 30px}
+.footer h2{max-width:720px}
+.footer p{color:#a8c1bc}
+.footer-bottom{border-top:1px solid #335052;padding-top:28px;margin-top:76px;display:flex;justify-content:space-between;color:#a6beb9;font-size:12px;flex-wrap:wrap;gap:15px}
+.page-header{padding:115px 0 90px}
+.page-header h1{font-size:clamp(48px,6vw,84px);max-width:930px}
+.page-header p{font-size:19px;max-width:720px}
+.banner{width:100%;height:460px;object-fit:cover}
+.chapters{max-width:950px;margin:auto}
+.chapter{display:grid;grid-template-columns:190px 1fr;gap:45px;padding:50px 0;border-top:1px solid var(--line)}
+.chapter .number{font-size:12px;color:#689185;font-weight:800;letter-spacing:.15em}
+.chapter h3{font-size:32px;max-width:600px}
+.chapter p{max-width:640px}
+.approachrow{display:grid;grid-template-columns:90px 1fr 1.4fr;gap:35px;padding:35px 0;border-top:1px solid var(--line);align-items:start}
+.approachrow .num{font-size:13px;color:#5b9183}
+.approachrow h3{font-size:24px}
+.approachrow p{font-size:15px}
+.feature-img{height:510px;object-fit:cover;width:100%;border-radius:3px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.tag{padding:9px 13px;border:1px solid var(--line);font-size:12px}
+.article{padding:34px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:200px 1fr auto;gap:40px}
+.article img{width:200px;height:140px;object-fit:cover}
+.article h3{font-size:24px;margin:5px 0 7px}
+.article p{font-size:14px}
+.article a{color:#246b5a}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:100px}
+.field{margin-bottom:22px}
+.field label{display:block;font-size:12px;font-weight:700;margin-bottom:8px}
+.field input,.field textarea{width:100%;padding:17px;border:1px solid #d2dbd6;background:white;color:var(--ink)}
+.field textarea{min-height:150px}
+.note{font-size:12px;color:#7d8985}
+.band{background:#d7e9d5;padding:85px 0}
+.band h2{max-width:850px}
+a{color:inherit}
+.mini-head{display:flex;justify-content:space-between;margin-bottom:25px;align-items:center}
+.mini-head a{font-size:12px;text-decoration:none;border-bottom:1px solid}
+ @media(max-width:1050px){.navlinks{gap:12px}
+.navlink{font-size:11px}
+.split{gap:45px}
+.portfolio-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){.navin{height:70px;padding:0 22px}
+.navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:var(--paper);padding:12px 24px 25px;box-shadow:0 10px 25px #0001;flex-direction:column;align-items:stretch}
+.navlinks.open{display:flex}
+.toggle{display:block}
+.navin>.contact-btn{display:none}
+.container{padding:0 24px}
+.hero{min-height:680px;margin:10px 10px 0}
+.hero::before{background:linear-gradient(90deg,rgba(10,34,34,.91),rgba(10,34,34,.45)),url('/images/antwerp-office.jpg') center/cover}
+.hero .inside{padding:62px 28px}
+.hero h1{font-size:46px}
+.hero p{font-size:15px}
+.hero-foot{left:28px}
+.section{padding:75px 0}
+.split,.contact-layout{grid-template-columns:1fr;gap:35px}
+.cards3,.portfolio-grid{grid-template-columns:1fr}
+.principle{min-height:210px}
+.principle h3{margin-top:25px}
+.topline{display:block}
+.topline p{margin-top:22px}
+.page-header{padding:72px 0 55px}
+.page-header h1{font-size:45px}
+.banner{height:280px}
+.chapter{grid-template-columns:1fr;gap:10px;padding:35px 0}
+.approachrow{grid-template-columns:38px 1fr;gap:12px}
+.approachrow p{grid-column:2}
+.article{grid-template-columns:105px 1fr;gap:16px}
+.article img{width:105px;height:110px}
+.article h3{font-size:19px}
+.article>a{grid-column:2}
+.feature-img{height:360px}
+.footer{padding-top:65px}
+.footer-bottom{margin-top:50px}
+}
+
+
+/* Hugo navigation and accessibility refinements. */
+a{color:inherit}
+.btn,.contact-btn,.logo,.navlink{text-decoration:none}
+.skip-link{position:fixed;left:16px;top:-80px;z-index:100;background:white;padding:12px;color:var(--ink)}
+.skip-link:focus{top:12px}
+:focus-visible{outline:3px solid #689185;outline-offset:5px}
+.page{display:block}
+.navlink[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px #1e5b50}
+.hero{scroll-margin-top:90px}
+.portfolio-body h3 .arrow{display:none}
+.photo{object-position:center}
+.footer a{text-decoration:underline}
+.note{font-size:13px}
+.content-page{min-height:55vh}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+*{transition:none!important}
+}
+@media(max-width:900px){.navin{gap:15px}
+.navlinks{gap:16px}
+}
+@media(max-width:700px){.hero-foot{gap:20px;font-size:9px}
+.navlinks{max-height:calc(100vh - 86px);overflow:auto}
+.navlinks .contact-btn{display:inline-flex}
+.logo{font-size:17px}
+.hero h1{font-size:clamp(36px,10vw,46px)}
+}
+
+
+@media(max-width:700px){html:not(.js) .navin{height:auto;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}html:not(.js) .navlinks{display:flex;position:static;flex-basis:100%;padding:0}html:not(.js) .toggle{display:none}}
+.contact-layout:has(>div:only-child){grid-template-columns:minmax(0,720px)}
+
+/* Keep Kris visible within the responsive about-section portrait. */
+.split .kris-portrait{aspect-ratio:2/3;object-position:center;}
+.split .partnership-photo{height:auto;aspect-ratio:16/9;object-fit:contain;}
+.about-banner{object-position:center 65%;}
