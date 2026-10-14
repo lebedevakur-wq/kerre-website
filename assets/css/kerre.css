@@ -17,7 +17,7 @@ button{cursor:pointer}
 .logo{font-family:Manrope;font-size:19px;font-weight:800;letter-spacing:-.07em;color:var(--ink);cursor:pointer;white-space:nowrap}
 .logo span{color:#66998b}
 .navlinks{display:flex;gap:26px;align-items:center}
-.navlink{border:0;background:transparent;color:#667274;font-size:12px;font-weight:600;padding:12px 0}
+.navlink{border:0;background:transparent;color:#667274;font-size:14px;font-weight:600;padding:12px 0}
 .navlink:hover,.navlink.selected{color:#0c3031}
 .navlink.selected{box-shadow:inset 0 -2px #1e5b50}
 .contact-btn,.btn{border-radius:3px;padding:16px 23px;background:var(--ink);color:#fff;border:1px solid var(--ink);display:inline-flex;align-items:center;gap:24px;justify-content:space-between;font-size:12px;font-weight:700;transition:.2s}
@@ -61,7 +61,7 @@ button{cursor:pointer}
 .principle p{font-size:14px}
 .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .portfolio-card{background:#fff;min-height:370px;display:flex;flex-direction:column;border:1px solid #e5eae7}
-.portfolio-pic{height:170px;background:#d9e4dd;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.portfolio-pic{aspect-ratio:2.15/1;background:#d9e4dd;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .portfolio-pic img{width:100%;height:100%;object-fit:cover;filter:saturate(.75)}
 .card-tag{position:absolute;top:14px;left:14px;background:#f8f8f4;padding:7px 10px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 .portfolio-body{padding:26px;flex:1}
@@ -108,7 +108,7 @@ a{color:inherit}
 .mini-head{display:flex;justify-content:space-between;margin-bottom:25px;align-items:center}
 .mini-head a{font-size:12px;text-decoration:none;border-bottom:1px solid}
  @media(max-width:1050px){.navlinks{gap:12px}
-.navlink{font-size:11px}
+.navlink{font-size:13px}
 .split{gap:45px}
 .portfolio-grid{grid-template-columns:repeat(2,1fr)}
 }
@@ -156,7 +156,7 @@ a{color:inherit}
 .page{display:block}
 .navlink[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -2px #1e5b50}
 .hero{scroll-margin-top:90px}
-.portfolio-body h3 .arrow{display:none}
+.portfolio-body h3 .arrow{display:inline;color:#267466;font-weight:400}
 .photo{object-position:center}
 .footer a{text-decoration:underline}
 .note{font-size:13px}
@@ -182,3 +182,17 @@ a{color:inherit}
 .split .kris-portrait{aspect-ratio:2/3;object-position:center;}
 .split .partnership-photo{height:auto;aspect-ratio:16/9;object-fit:contain;}
 .about-banner{object-position:center 65%;}
+.kerre-about-btn{padding:20px 30px;font-size:15px;background:#153a38;border-color:#153a38;color:#f3f8ef;gap:32px;max-width:100%;}
+.kerre-about-btn:hover{background:#24534c;border-color:#24534c;}
+.kerre-portfolio-btn{padding:20px 30px;font-size:15px;gap:32px;max-width:100%;}
+.hero-quote{margin:0 0 34px;max-width:550px;}
+.hero-quote blockquote{margin:0;}
+.hero .hero-quote p{margin-bottom:12px;}
+.hero-quote figcaption{color:#d7e0d9;font-size:14px;}
+.company-link{text-decoration:none;}
+.company-link:hover{text-decoration:underline;text-underline-offset:4px;}
+.portfolio-logo{background:#fff;}
+.portfolio-logo img.company-logo{object-fit:contain;padding:56px 24px 24px;filter:none;}
+.portfolio-logo img.logo-buffl{object-fit:cover;object-position:center;}
+
+.article .insights-partnership-photo{height:auto;aspect-ratio:20/7;object-fit:contain;align-self:center;}
