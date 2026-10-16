@@ -84,7 +84,12 @@ img { display: block; max-width: 100%; }
 /* Shared sticky navigation. The tablet disclosure uses the same 900px breakpoint as JS. */
 .nav { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--line); }
 .navin { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: var(--s4); }
-.logo { font: 700 32px/1 Manrope, Arial, sans-serif; letter-spacing: -.05em; text-decoration: none; white-space: nowrap; }
+.logo { font: 600 40px/1 Manrope, Arial, sans-serif; letter-spacing: -.045em; text-decoration: none; white-space: nowrap; }
+.kerre-lockup { display: inline-flex; flex-shrink: 0; align-items: center; gap: 16px; min-height: 48px; color: var(--ink); }
+.kerre-lockup-symbol { width: 23px; height: 32px; object-fit: contain; flex-shrink: 0; }
+.kerre-lockup-wordmark { display: block; }
+.kerre-lockup--light { color: var(--paper); }
+.footer-brand { margin-bottom: var(--s4); }
 .navlinks { display: flex; align-items: center; gap: var(--s1); }
 .navlink { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 12px; font-size: 14px; font-weight: 500; text-decoration: none; color: var(--muted); white-space: nowrap; }
 .navlink:hover, .navlink[aria-current] { color: var(--ink); box-shadow: inset 0 -2px var(--ink); }
@@ -292,7 +297,9 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 900px) {
   .navin { min-height: 72px; }
-  .logo { font-size: 30px; }
+  .logo { font-size: 32px; }
+  .kerre-lockup { gap: 12px; }
+  .kerre-lockup-symbol { width: 19px; height: 26px; }
   .toggle { display: inline-flex; margin-left: auto; }
   .navlinks { display: none; position: absolute; inset: 72px 0 auto; width: 100%; max-height: calc(100dvh - 72px); overflow: auto; padding: var(--s2) var(--gutter) var(--s3); background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: var(--s1); }
   .navlinks.open { display: flex; }

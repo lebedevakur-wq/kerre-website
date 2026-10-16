@@ -1,6 +1,6 @@
 <nav class="nav{{ if .IsHome }} home-nav{{ end }}" aria-label="Main navigation">
 <div class="navin">
-<a class="logo" href="{{ "" | relURL }}" aria-label="Kerre home">kerre<span>.</span></a>
+{{ partial "kerre/logo.html" (dict "light" .IsHome) }}
 <button class="toggle" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false"><span aria-hidden="true">☰</span><span class="menu-label">Menu</span></button>
 <div class="navlinks" id="navlinks">
 {{ $current := .RelPermalink }}

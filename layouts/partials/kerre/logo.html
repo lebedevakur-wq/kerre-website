@@ -1,0 +1,5 @@
+{{/* One shared primary signature; the symbol is decorative beside the accessible name. */}}
+<a class="logo kerre-lockup{{ if .light }} kerre-lockup--light{{ end }}" href="{{ "" | relURL }}" aria-label="Kerre home">
+  <img class="kerre-lockup-symbol" src="{{ if .light }}{{ "images/kerre-symbol-light.png" | relURL }}{{ else }}{{ "images/kerre-symbol.png" | relURL }}{{ end }}" alt="" width="36" height="48" decoding="async">
+  <span class="kerre-lockup-wordmark">kerre.</span>
+</a>
