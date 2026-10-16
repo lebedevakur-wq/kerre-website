@@ -192,12 +192,21 @@ a{color:inherit}
 .company-link{text-decoration:none;}
 .company-link:hover{text-decoration:underline;text-underline-offset:4px;}
 .portfolio-logo{background:#fff;}
-.portfolio-logo img.company-logo{object-fit:contain;padding:56px 24px 24px;filter:none;}
+.portfolio-logo img.company-logo{object-fit:contain;object-position:center;padding:32px 24px;filter:none;transform:scale(.9025);}
 .portfolio-logo img.logo-buffl{object-fit:cover;object-position:center;}
 .portfolio-card{position:relative;}
 .portfolio-card .company-link::after{content:"";position:absolute;inset:0;}
 .portfolio-card:has(.company-link:hover){border-color:#568378;}
 .portfolio-card:has(.company-link:focus-visible){outline:3px solid #568378;outline-offset:4px;}
+.portfolio-card{transition:border-color .2s ease;}
+.portfolio-card:has(.company-link:hover),
+.portfolio-card:has(.company-link:focus-visible){background:#153a38;border-color:#153a38;color:#f8f8f4;}
+.portfolio-card:has(.company-link:hover) .portfolio-body p,
+.portfolio-card:has(.company-link:focus-visible) .portfolio-body p{color:#e2eee8;}
+.portfolio-card:has(.company-link:hover) .portfolio-body .arrow,
+.portfolio-card:has(.company-link:focus-visible) .portfolio-body .arrow{color:#ccebe1;}
+.portfolio-card:has(.company-link:hover) .card-tag,
+.portfolio-card:has(.company-link:focus-visible) .card-tag{visibility:hidden;}
 .company-page{padding-top:55px;padding-bottom:100px;}
 .company-back{display:inline-block;margin-bottom:48px;text-underline-offset:4px;}
 .company-visual{aspect-ratio:2/1;overflow:hidden;border:1px solid var(--line);}
@@ -205,6 +214,14 @@ a{color:inherit}
 .company-visual img.company-logo{object-fit:contain;padding:28px;}
 .company-visual img.logo-buffl{object-fit:cover;}
 .contact-heading{font-size:32px;}
+.article img.insights-company-logo{object-fit:contain;padding:16px;background:#fff;}
+/* Chapters gain a dark surface as the reader reaches them. Switch both
+   colours together to preserve contrast throughout the change. */
+.story-chapters .chapter{padding:40px 32px;margin-bottom:18px;border:1px solid var(--line);border-radius:5px;}
+.story-chapters .chapter-read{background:#153a38;border-color:#153a38;color:#f8f8f4;}
+.story-chapters .chapter-read p{color:#e2eee8;}
+.story-chapters .chapter-read .number{color:#ccebe1;}
+@media(max-width:760px){.story-chapters .chapter{padding:28px 22px;}}
 .contact-fields{border:0;padding:0;margin:0;min-width:0;}
 .contact-form-legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
 .contact-form-note{padding:14px 16px;border-left:3px solid #568378;background:#f8f8f4;}

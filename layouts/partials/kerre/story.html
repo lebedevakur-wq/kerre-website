@@ -4,7 +4,7 @@
 <p>Some things change as you build a business. The curiosity to understand how things work, and how they could work better, never did.</p>
 </div>
 <img class="banner" src="{{ "images/port-black-and-white.png" | relURL }}" alt="Black-and-white aerial view of a ship repair yard with dry docks, cranes and tugboats" width="1514" height="788">
-<section class="section">
+<section class="section story-chapters">
 <div class="container chapters">
 <div class="chapter">
 <div class="number">CHAPTER 01/<br>CHILDHOOD</div>
@@ -43,3 +43,5 @@
 </div>
 </div>
 </section>
+{{ $storyScript := resources.Get "js/story.js" | minify | fingerprint }}
+<script src="{{ $storyScript.RelPermalink }}" integrity="{{ $storyScript.Data.Integrity }}" defer></script>
