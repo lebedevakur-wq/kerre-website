@@ -234,7 +234,7 @@ a{color:inherit}
 .article .insights-partnership-photo{height:auto;aspect-ratio:20/7;object-fit:contain;align-self:center;}
 
 /* Portfolio-led homepage; other pages retain their existing layouts. */
-.investment-hero{padding-top:64px;padding-bottom:0;background:var(--dark);color:var(--on-dark);}
+.investment-hero{padding-top:64px;padding-bottom:0;background:var(--dark) url('{{ "images/kerre-hero-background.png" | relURL }}') center/cover no-repeat;color:var(--on-dark);}
 .investment-hero-top{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:64px;}
 .investment-hero-top .eyebrow{margin:0;}
 .investment-location{font-size:12px;color:var(--sage);}
@@ -453,19 +453,19 @@ p{margin-bottom:24px;}
 
 /* Compact homepage philosophy: one introduction, three aligned principles. */
 .investment-home .home-philosophy{padding:80px 0;background:var(--paper);}
-.home-philosophy .philosophy-container{max-width:1160px;}
+.home-philosophy .philosophy-container{max-width:1280px;}
 .philosophy-introduction{margin-bottom:48px;}
 .investment-home .home-philosophy .philosophy-title{font-family:Manrope,Arial,sans-serif;font-size:clamp(44px,4vw,48px);font-weight:600;line-height:1.15;letter-spacing:-.035em;color:var(--ink);margin:0 0 20px;text-wrap:balance;}
 .philosophy-introduction p{max-width:650px;font-size:17px;line-height:1.7;color:var(--body);margin:0;}
 .philosophy-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:32px;row-gap:0;align-items:start;}
 .philosophy-principle{border-top:1px solid #DDE3DF;padding:20px 0 0;min-width:0;}
 .philosophy-number{display:block;font-size:12px;font-weight:500;line-height:1.6;color:var(--body);margin-bottom:14px;}
-.philosophy-principle h3{font-family:Manrope,Arial,sans-serif;font-size:24px;font-weight:600;line-height:1.25;letter-spacing:-.025em;color:var(--ink);margin:0 0 14px;text-wrap:balance;}
+.philosophy-principle h3{font-family:Manrope,Arial,sans-serif;font-size:24px;font-weight:600;line-height:1.25;letter-spacing:-.025em;color:var(--ink);margin:0;text-wrap:balance;}
 .philosophy-principle p{font-size:16px;line-height:1.6;color:var(--body);margin:0;}
 .philosophy-cta{margin-top:40px;}
 .home-philosophy .btn.cta{min-height:46px;min-width:0;padding:12px 18px;font-size:13px;line-height:1.5;background:var(--ink);border-color:var(--ink);color:var(--on-dark);}
 .home-philosophy .btn.cta:hover{background:var(--ink);border-color:var(--ink);color:var(--on-dark);transform:translateY(-1px);}
-@supports(grid-template-rows:subgrid){.philosophy-principle{display:grid;grid-template-rows:subgrid;grid-row:span 3;}}
+@supports(grid-template-rows:subgrid){.philosophy-principle{display:grid;grid-template-rows:subgrid;grid-row:span 2;}}
 @media(max-width:760px){
  .investment-home .home-philosophy{padding:60px 0;}
  .investment-home .home-philosophy .philosophy-title{font-size:clamp(32px,6vw,42px);}
@@ -646,13 +646,13 @@ p{margin-bottom:24px;}
 
 /* A focused founder introduction, separate from the investment opening. */
 .investment-home .founder-intro{padding:80px 0;}
-.founder-intro .founder-intro-layout{max-width:1200px;display:grid;grid-template-columns:minmax(0,52fr) minmax(0,48fr);gap:70px;align-items:center;}
+.founder-intro .founder-intro-layout{max-width:1280px;display:grid;grid-template-columns:minmax(0,52fr) minmax(0,48fr);gap:70px;align-items:center;}
 .founder-intro-copy{min-width:0;}
 .investment-home .founder-intro .founder-intro-title{font-family:Manrope,Arial,sans-serif;font-size:clamp(52px,4.4vw,58px);font-weight:600;line-height:1.12;letter-spacing:-.035em;margin:0 0 28px;text-wrap:initial;}
 .founder-intro-title>span{display:block;}
 .investment-home .founder-intro-copy>p{max-width:480px;font-size:17px;line-height:1.7;margin:0 0 30px;color:var(--sage);}
 .founder-intro .founder-intro-cta{width:auto;min-width:190px;min-height:52px;padding:14px 20px;font-size:14px;gap:24px;}
-.founder-intro-photo{display:block;width:100%;height:auto;aspect-ratio:1/1.08;max-height:520px;object-fit:cover;object-position:center 48%;border-radius:0;}
+.founder-intro-photo{display:block;width:100%;height:auto;aspect-ratio:1/1.08;max-height:520px;object-fit:cover;object-position:center 48%;border-radius:0;clip-path:inset(0 0 2px 0);}
 .founder-belief{background:var(--sage);}
 .founder-belief-quote{margin:0;max-width:1000px;}
 .founder-belief-quote blockquote{margin:0 0 28px;font-family:Manrope,Arial,sans-serif;font-size:clamp(28px,3.4vw,46px);line-height:1.4;letter-spacing:-.03em;font-weight:500;}
