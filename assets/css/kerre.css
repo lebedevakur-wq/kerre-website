@@ -185,6 +185,7 @@ a{color:inherit}
 .kerre-about-btn{padding:20px 30px;font-size:15px;background:#153a38;border-color:#153a38;color:#f3f8ef;gap:32px;max-width:100%;}
 .kerre-about-btn:hover{background:#24534c;border-color:#24534c;}
 .kerre-portfolio-btn{padding:20px 30px;font-size:15px;gap:32px;max-width:100%;}
+.btn{width:224px;max-width:100%;min-height:54.4px;padding:14.4px 19.2px;font-size:12px;gap:16px;}
 .hero-quote{margin:0 0 34px;max-width:550px;}
 .hero-quote blockquote{margin:0;}
 .hero .hero-quote p{margin-bottom:12px;}
