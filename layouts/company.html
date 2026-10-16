@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="container company-page">
+  <a class="company-back" href="{{ "portfolio/" | relURL }}">← Back to Portfolio</a>
+  <div class="split">
+    <div class="company-visual {{ if .Params.imageclass }}portfolio-logo{{ end }}">
+      <img class="{{ .Params.imageclass }}" src="{{ printf "images/%s" .Params.image | relURL }}" alt="{{ if .Params.imageclass }}{{ .Title }} logo{{ end }}">
+    </div>
+    <div class="copy">
+      <div class="eyebrow">{{ .Params.category }}</div>
+      <h1>{{ .Title }}</h1>
+      <p class="lead">{{ .Description }}</p>
+      {{ .Content }}
+      {{ with .Params.website }}
+      <a class="btn" href="{{ . }}">Visit {{ $.Title }} website <span aria-hidden="true">↗</span></a>
+      {{ end }}
+    </div>
+  </div>
+</article>
+{{ end }}

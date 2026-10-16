@@ -194,5 +194,22 @@ a{color:inherit}
 .portfolio-logo{background:#fff;}
 .portfolio-logo img.company-logo{object-fit:contain;padding:56px 24px 24px;filter:none;}
 .portfolio-logo img.logo-buffl{object-fit:cover;object-position:center;}
+.portfolio-card{position:relative;}
+.portfolio-card .company-link::after{content:"";position:absolute;inset:0;}
+.portfolio-card:has(.company-link:hover){border-color:#568378;}
+.portfolio-card:has(.company-link:focus-visible){outline:3px solid #568378;outline-offset:4px;}
+.company-page{padding-top:55px;padding-bottom:100px;}
+.company-back{display:inline-block;margin-bottom:48px;text-underline-offset:4px;}
+.company-visual{aspect-ratio:2/1;overflow:hidden;border:1px solid var(--line);}
+.company-visual img{display:block;width:100%;height:100%;object-fit:cover;}
+.company-visual img.company-logo{object-fit:contain;padding:28px;}
+.company-visual img.logo-buffl{object-fit:cover;}
+.contact-heading{font-size:32px;}
+.contact-fields{border:0;padding:0;margin:0;min-width:0;}
+.contact-form-legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
+.contact-form-note{padding:14px 16px;border-left:3px solid #568378;background:#f8f8f4;}
+.contact-fields .btn:disabled{cursor:not-allowed;background:#526664;border-color:#526664;}
+.company-page h1{font-size:clamp(38px,5vw,64px);overflow-wrap:anywhere;}
+@media(max-width:760px){.company-page{padding-top:35px;padding-bottom:65px;}.company-back{margin-bottom:32px;}}
 
 .article .insights-partnership-photo{height:auto;aspect-ratio:20/7;object-fit:contain;align-self:center;}
