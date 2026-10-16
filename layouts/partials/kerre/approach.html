@@ -1,56 +1,48 @@
-<div class="container page-header">
-<div class="eyebrow">My Approach</div>
-<h1>Investing with an entrepreneurial mindset.</h1>
-<p>Great businesses begin with people who see a better way forward. I look for determination, practical innovation and the ability to create long-term value.</p>
-</div>
-<section class="section soft">
+<div class="approach-page">
+<header class="container page-header">
+<div class="eyebrow">The Kerre approach</div>
+<h1>More than capital. A shared ambition to build.</h1>
+<p>Backing entrepreneurs takes more than belief in an idea. It takes trust, practical experience and a shared commitment to building a business that lasts.</p>
+</header>
+
+<section class="container approach-themes" aria-labelledby="approach-themes-title">
+<h2 class="eyebrow" id="approach-themes-title">What matters in a partnership</h2>
+<article class="approach-theme">
+<span class="approach-theme-number" aria-hidden="true">01 /</span>
+<h2>Ambitious People</h2>
+<div><p>Entrepreneurs with a clear vision, the ability to execute and the determination to keep moving forward.</p><p>Understanding the market matters. So do integrity, resilience and the willingness to listen and learn. Good partnerships begin with trust and honest conversations.</p></div>
+</article>
+<article class="approach-theme">
+<span class="approach-theme-number" aria-hidden="true">02 /</span>
+<h2>Meaningful Businesses</h2>
+<div><p>Companies solving real problems through scalable technology or a defensible business model.</p><p>The opportunity should be clear: improve how something works, reduce complexity or give customers a useful new capability. Lasting value needs a sound foundation and the patience to build it.</p></div>
+</article>
+<article class="approach-theme">
+<span class="approach-theme-number" aria-hidden="true">03 /</span>
+<h2>Active Partnership</h2>
+<div><p>Strategic thinking, operational experience and relevant connections alongside financial capital.</p><p>Kris brings a founder's perspective on technology, teams and business development. The aim is to be a constructive partner: sharing practical advice, making useful introductions and respecting the entrepreneur's leadership.</p></div>
+</article>
+</section>
+
+<section class="section dark approach-interests" id="areas-of-interest" aria-labelledby="approach-interests-title">
 <div class="container">
-<div class="eyebrow">Guiding principles</div>
-<div class="approachrow">
-<div class="num">01 /</div>
-<h3>People before ideas</h3>
-<p>I look for founders who understand their market, believe in their product and remain open to learning. Trust and transparency are at the core of every good partnership.</p>
+<header class="approach-interests-heading">
+<div class="eyebrow">Areas of particular interest</div>
+<h2 id="approach-interests-title">Technology that makes business work better.</h2>
+<p>Kerre focuses on technology that solves real business challenges, with particular experience in business software, logistics and digital innovation.</p>
+</header>
+<div class="approach-interest-grid">
+<div><h3>Technology &amp; Business Software</h3><p>Software that simplifies business operations, strengthens digital infrastructure and creates meaningful improvements through technology, AI and automation.</p></div>
+<div><h3>Logistics &amp; Supply Chain</h3><p>Technology that improves shipment visibility, transport collaboration and information sharing across complex supply chains.</p></div>
 </div>
-<div class="approachrow">
-<div class="num">02 /</div>
-<h3>Technology with purpose</h3>
-<p>The most compelling innovations solve real problems. I value products that improve efficiency, reduce complexity or give businesses entirely new capabilities.</p>
-</div>
-<div class="approachrow">
-<div class="num">03 /</div>
-<h3>Collaboration creates opportunity</h3>
-<p>By connecting people, businesses and data in thoughtful ways, technology can achieve more than any individual organisation could alone.</p>
-</div>
-<div class="approachrow">
-<div class="num">04 /</div>
-<h3>Build for the long term</h3>
-<p>Meaningful growth takes patience, a strong team and a sound business model. A sustainable foundation matters more than short-lived excitement.</p>
-</div>
-<div class="approachrow">
-<div class="num">05 /</div>
-<h3>Beyond the cheque</h3>
-<p>I aim to bring firsthand experience, technological understanding, practical advice and useful introductions—while respecting the founder's leadership.</p>
-</div>
+<div class="approach-interest-cta">{{ partial "kerre/cta.html" (dict "action" "portfolio" "variant" "on-dark") }}</div>
 </div>
 </section>
-<section class="section dark approach-feature">
+
+<section class="section approach-invitation" aria-labelledby="approach-invitation-title">
 <div class="container split">
-<img class="feature-img partnership-photo" src="{{ "images/kris-kerremans-kurt-joosen.jpg" | relURL }}" alt="Kris Kerremans and Kurt Joosen shaking hands in front of shipping containers" width="1600" height="900" loading="lazy">
-<div>
-<div class="eyebrow">Areas of interest</div>
-<h2>What I bring to the table</h2>
-<p class="lead">More than financial support. A partner with firsthand experience.</p>
-<p>I invest in people with the ambition to build something meaningful, and I contribute the experience, connections and perspective that can help them get there.</p>
-<div class="tags">
-<span class="tag">Maritime & Logistics</span>
-<span class="tag">Enterprise Software</span>
-<span class="tag">AI & Automation</span>
-<span class="tag">Digital Infrastructure</span>
-<span class="tag">Industry Platforms</span>
-</div>
-<div style="margin-top:32px">
-<a class="btn" href="{{ "contact/" | relURL }}">Start a Conversation ↗</a>
-</div>
-</div>
+<img class="feature-img partnership-photo" src="{{ "images/kris-kerremans-kurt-joosen.jpg" | relURL }}" alt="Kris Kerremans and Kurt Joosen shaking hands in front of shipping containers" width="1600" height="900" loading="lazy" decoding="async">
+<div><div class="eyebrow">Start a conversation</div><h2 id="approach-invitation-title">Building something meaningful?</h2><p>If you're developing a technology business, improving the way an industry works or looking for a partner who understands entrepreneurship, let's talk.</p><p>A good conversation is the starting point.</p>{{ partial "kerre/cta.html" (dict "action" "contact") }}</div>
 </div>
 </section>
+</div>

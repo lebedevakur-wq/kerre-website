@@ -1,0 +1,15 @@
+{{ $page := .page }}
+{{ with $page }}
+<article class="editorial-story{{ if $.featured }} editorial-story-featured{{ end }}" id="{{ .File.ContentBaseName }}">
+<a class="editorial-story-link" href="{{ .RelPermalink }}" aria-labelledby="title-{{ .File.ContentBaseName }}">
+<div class="editorial-media{{ if .Params.logoImage }} editorial-media-logo{{ end }}"><img src="{{ printf "images/%s" .Params.image | relURL }}" alt="{{ .Params.imageAlt }}" loading="lazy" decoding="async"></div>
+<div class="editorial-story-copy">
+<span class="eyebrow">{{ .Params.topic }}</span>
+<p class="editorial-meta">{{ .Params.sourceName }} <span aria-hidden="true">·</span> {{ partial "kerre/article-date.html" . }}</p>
+<h2 id="title-{{ .File.ContentBaseName }}">{{ .Title }}</h2>
+<p class="editorial-introduction">{{ .Description }}</p>
+<span class="editorial-read">Read the story <span aria-hidden="true">→</span></span>
+</div>
+</a>
+</article>
+{{ end }}

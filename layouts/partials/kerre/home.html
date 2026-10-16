@@ -4,62 +4,41 @@
 <div class="investment-hero-top"><span class="eyebrow">Private investments</span></div>
 <h1 id="investment-title">Built by experience.<br><span>Driven by ambition.</span></h1>
 <p class="investment-intro">Partnering with ambitious entrepreneurs to build lasting businesses.</p>
-<a class="btn btn-accent" href="{{ "portfolio/" | relURL }}">Explore Portfolio <span aria-hidden="true">↗</span></a>
+{{ partial "kerre/cta.html" (dict "action" "portfolio" "variant" "accent") }}
 </div>
 </section>
-<section class="section home-investments">
+<section class="section home-investments home-selected" aria-labelledby="home-selected-title">
 <div class="container">
-<div class="topline">
-<div>
-<div class="eyebrow">Selected investments</div>
-<h2>Companies shaping tomorrow.</h2>
-</div>
-</div>
-<div class="portfolio-grid">{{ partial "kerre/portfolio-home.html" . }}</div>
-<div style="margin-top:40px">
-<a class="btn" href="{{ "portfolio/" | relURL }}">Explore All Companies <span aria-hidden="true">↗</span></a>
-</div>
+<header class="home-selected-heading">
+<div class="eyebrow">Selected Companies</div>
+<h2 id="home-selected-title">Backing people. Building progress.</h2>
+<p>A selection of companies and ventures connected through technology, ambition and industry expertise.</p>
+</header>
+<div class="portfolio-company-grid">{{ partial "kerre/portfolio-home.html" . }}</div>
+<div class="home-selected-cta">{{ partial "kerre/cta.html" (dict "action" "portfolio") }}</div>
 </div>
 </section>
 <section class="section home-experience founder-intro" aria-labelledby="founder-intro-title">
 <div class="container founder-intro-layout">
 <div class="founder-intro-copy">
 <h2 class="founder-intro-title" id="founder-intro-title"><span>Entrepreneur first.</span><span>Investor by</span><span>conviction.</span></h2>
-<p>From building technology businesses to backing ambitious entrepreneurs. Kris Kerremans brings firsthand experience, strategic insight and a long-term perspective to every partnership.</p>
-<a class="btn founder-intro-cta" href="{{ "about/" | relURL }}">Discover Kerre <span aria-hidden="true">→</span></a>
+<p>From building technology businesses to backing ambitious entrepreneurs. Kerre brings firsthand experience, strategic insight and a long-term perspective to every partnership.</p>
 </div>
-<img class="founder-intro-photo" src="{{ "images/kris-kerremans.png" | relURL }}" alt="Kris Kerremans sitting on a classic Ford Mustang" width="410" height="615" loading="lazy" decoding="async">
+<img class="founder-intro-photo" src="{{ "images/penguin-about.png" | relURL }}" alt="A penguin standing on coastal rocks beside the sea" width="1000" height="615" loading="lazy" decoding="async">
 </div>
 </section>
-<div class="container home-foundation"><div class="investment-foundation"><span>Technology with purpose</span><span>Partnerships for the long term</span><span>Founder experience since 2007</span></div></div>
-<section class="section soft home-philosophy">
-<div class="container">
-<div class="topline">
-<div>
-<div class="eyebrow">03 / Investment philosophy</div>
-<h2>Capital is only<br>the beginning.</h2>
+<section class="home-philosophy" aria-labelledby="home-philosophy-title">
+<div class="container philosophy-container">
+<header class="philosophy-introduction">
+<h2 class="philosophy-title" id="home-philosophy-title">Capital is only the beginning.</h2>
+<p>Investing is about more than funding. It's about sharing experience, building trust and creating long-term value.</p>
+</header>
+<div class="philosophy-principles">
+<article class="philosophy-principle"><span class="philosophy-number">01</span><h3>People first.</h3><p>I believe in founders with integrity, ambition and the resilience to move forward.</p></article>
+<article class="philosophy-principle"><span class="philosophy-number">02</span><h3>Technology with purpose.</h3><p>I look for practical solutions that solve meaningful challenges and create measurable value.</p></article>
+<article class="philosophy-principle"><span class="philosophy-number">03</span><h3>Better together.</h3><p>The strongest progress happens when companies share knowledge and collaborate.</p></article>
 </div>
-</div>
-<div class="cards3">
-<div class="principle">
-<span>01 /</span>
-<h3>People first.</h3>
-<p>I believe in founders with integrity, ambition and the resilience to move forward.</p>
-</div>
-<div class="principle">
-<span>02 /</span>
-<h3>Technology with purpose.</h3>
-<p>I look for practical solutions that solve meaningful challenges and create measurable value.</p>
-</div>
-<div class="principle">
-<span>03 /</span>
-<h3>Better together.</h3>
-<p>The strongest progress happens when companies share knowledge and collaborate.</p>
-</div>
-</div>
-<div style="margin-top:36px">
-<a class="btn kerre-about-btn" href="{{ "approach/" | relURL }}">My Investment Approach <span aria-hidden="true">↗</span></a>
-</div>
+<div class="philosophy-cta">{{ partial "kerre/cta.html" (dict "action" "approach") }}</div>
 </div>
 </section>
 <section class="quote-block">

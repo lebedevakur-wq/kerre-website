@@ -1,0 +1,1 @@
+{{ if .Params.publicationDate }}<time datetime="{{ .Params.publicationDate }}">{{ time.Format "2 January 2006" .Params.publicationDate }}</time>{{ else }}<span>{{ .Params.publicationYear }}</span>{{ end }}

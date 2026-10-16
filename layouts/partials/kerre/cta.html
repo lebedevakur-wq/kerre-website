@@ -1,0 +1,4 @@
+{{ $action := index (index hugo.Data "calls-to-action") .action }}
+{{ $url := $action.url }}
+{{ if not $action.external }}{{ $url = $url | relURL }}{{ end }}
+<a class="btn cta{{ with .variant }} cta--{{ . }}{{ end }}" href="{{ $url }}"{{ if $action.external }} aria-label="{{ $action.label }} with Kris Kerremans on LinkedIn"{{ end }}>{{ $action.label }} <span aria-hidden="true">{{ if $action.external }}↗{{ else }}→{{ end }}</span></a>

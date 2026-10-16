@@ -1,17 +1,5 @@
 {{ range slice "portomundi" "hakka" "buffl" "inuits" "striktly" "dockflow" "digitrans" "certiweight" "askforce-one" "manco" }}
 {{ with site.GetPage (printf "companies/%s" .) }}
-{{ $key := .File.ContentBaseName }}
-<a class="portfolio-entry" href="{{ .RelPermalink }}" data-categories="{{ delimit .Params.filterCategories " " }}" aria-labelledby="company-{{ $key }}" aria-describedby="summary-{{ $key }}">
-  <div class="portfolio-entry-logo{{ if not .Params.imageclass }} portfolio-entry-unbranded{{ end }}"{{ if not .Params.imageclass }} aria-hidden="true"{{ end }}>
-    {{ if .Params.imageclass }}
-    <img class="{{ if eq $key "buffl" }}portfolio-entry-buffl{{ end }}" src="{{ printf "images/%s" .Params.image | relURL }}" alt="{{ .Title }} logo" loading="lazy" decoding="async">
-    {{ end }}
-  </div>
-  <div class="portfolio-entry-content">
-    <span class="portfolio-entry-category">{{ .Params.industry }}</span>
-    <div class="portfolio-entry-title"><h2 id="company-{{ $key }}">{{ .Title }}</h2><span class="portfolio-entry-arrow" aria-hidden="true">↗</span></div>
-    <p id="summary-{{ $key }}">{{ .Params.overview }}</p>
-  </div>
-</a>
+{{ partial "kerre/company-tile.html" (dict "company" . "headingLevel" 2) }}
 {{ end }}
 {{ end }}

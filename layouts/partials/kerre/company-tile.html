@@ -1,0 +1,18 @@
+{{ $company := .company }}
+{{ $key := $company.File.ContentBaseName }}
+{{ with $company }}
+<a class="portfolio-entry{{ if $.logoOnly }} portfolio-entry-logo-only{{ end }}" href="{{ .RelPermalink }}" data-categories="{{ delimit .Params.filterCategories " " }}"{{ if $.logoOnly }} aria-label="{{ .Title }} company profile"{{ else }} aria-labelledby="company-{{ $key }}" aria-describedby="summary-{{ $key }}"{{ end }}>
+  <div class="portfolio-entry-logo{{ if not .Params.imageclass }} portfolio-entry-unbranded{{ end }}"{{ if not .Params.imageclass }} aria-hidden="true"{{ end }}>
+    {{ if .Params.imageclass }}
+    <img class="{{ if eq $key "buffl" }}portfolio-entry-buffl{{ end }}" src="{{ printf "images/%s" .Params.image | relURL }}" alt="{{ .Title }} logo" loading="lazy" decoding="async">
+    {{ end }}
+  </div>
+  {{ if not $.logoOnly }}
+  <div class="portfolio-entry-content">
+    <span class="portfolio-entry-category">{{ .Params.industry }}</span>
+    <div class="portfolio-entry-title">{{ if eq $.headingLevel 3 }}<h3 id="company-{{ $key }}">{{ .Title }}</h3>{{ else }}<h2 id="company-{{ $key }}">{{ .Title }}</h2>{{ end }}<span class="portfolio-entry-arrow" aria-hidden="true">↗</span></div>
+    <p id="summary-{{ $key }}">{{ .Params.overview }}</p>
+  </div>
+  {{ end }}
+</a>
+{{ end }}

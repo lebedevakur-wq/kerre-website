@@ -1,0 +1,35 @@
+{{ define "head" }}
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ printf "images/%s" .Params.image | absURL }}">
+{{ end }}
+{{ define "main" }}
+<article class="editorial-detail">
+<header class="container editorial-detail-header">
+<a class="editorial-back" href="{{ "insights/" | relURL }}">← Back to Insights</a>
+<div class="eyebrow">{{ .Params.topic }}</div>
+<p class="editorial-meta">Published by {{ .Params.sourceName }} <span aria-hidden="true">·</span> {{ partial "kerre/article-date.html" . }}</p>
+<h1>{{ .Title }}</h1>
+<p class="editorial-detail-lead">{{ .Description }}</p>
+</header>
+<figure class="container editorial-detail-figure">
+<div class="editorial-media{{ if .Params.logoImage }} editorial-media-logo{{ end }}"><img src="{{ printf "images/%s" .Params.image | relURL }}" alt="{{ .Params.imageAlt }}" decoding="async"></div>
+</figure>
+<div class="container editorial-article-layout">
+<aside class="editorial-source" aria-label="About this article">
+<h2>Published coverage</h2>
+<p>A short Kerre summary of reporting published by {{ .Params.sourceName }}. The full article remains with its original publisher.</p>
+<a href="{{ .Params.sourceUrl }}">Read the original on {{ .Params.sourceName }} <span aria-hidden="true">↗</span></a>
+<a class="editorial-share" href="{{ printf "mailto:?%s" (querify "subject" .Title "body" .Permalink) | safeURL }}">Share by email <span aria-hidden="true">↗</span></a>
+</aside>
+<div class="editorial-prose">
+{{ .Content }}
+<div class="editorial-related"><h2>Related companies</h2>
+{{ range .Params.relatedCompanies }}{{ with site.GetPage (printf "companies/%s" .) }}<a href="{{ .RelPermalink }}">{{ .Title }} <span aria-hidden="true">→</span></a>{{ end }}{{ end }}
+</div>
+</div>
+</div>
+</article>
+{{ end }}

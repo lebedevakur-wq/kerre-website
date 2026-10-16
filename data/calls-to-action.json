@@ -1,0 +1,19 @@
+{
+  "portfolio": {
+    "label": "Explore Portfolio",
+    "url": "portfolio/"
+  },
+  "approach": {
+    "label": "Discover My Approach",
+    "url": "approach/"
+  },
+  "contact": {
+    "label": "Get in Touch",
+    "url": "contact/"
+  },
+  "direct": {
+    "label": "Get in Touch",
+    "url": "https://www.linkedin.com/in/kriskerremans/",
+    "external": true
+  }
+}

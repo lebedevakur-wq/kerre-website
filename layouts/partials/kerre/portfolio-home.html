@@ -1,7 +1,5 @@
-{{ range slice "portomundi" "inuits" "buffl" }}
+{{ range index hugo.Data "featured-companies" }}
 {{ with site.GetPage (printf "companies/%s" .) }}
-<a class="investment-tile investment-tile-with-logo" href="{{ .RelPermalink }}" aria-label="{{ .Title }} company profile">
-<span class="investment-tile-logo"><img{{ if eq .File.ContentBaseName "buffl" }} class="investment-tile-buffl"{{ end }} src="{{ printf "images/%s" .Params.image | relURL }}" alt="" loading="lazy" decoding="async"></span>
-</a>
+{{ partial "kerre/company-tile.html" (dict "company" . "logoOnly" true) }}
 {{ end }}
 {{ end }}
