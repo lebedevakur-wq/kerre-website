@@ -195,18 +195,18 @@ a{color:inherit}
 .portfolio-logo img.company-logo{object-fit:contain;object-position:center;padding:32px 24px;filter:none;transform:scale(.9025);}
 .portfolio-logo img.logo-buffl{object-fit:cover;object-position:center;}
 .portfolio-card{position:relative;}
-.portfolio-card .company-link::after{content:"";position:absolute;inset:0;}
-.portfolio-card:has(.company-link:hover){border-color:#568378;}
-.portfolio-card:has(.company-link:focus-visible){outline:3px solid #568378;outline-offset:4px;}
+.portfolio-card .company-link::after{content:"";position:absolute;inset:0;z-index:1;}
+.portfolio-card:hover{border-color:#568378;}
+.portfolio-card:focus-within{outline:3px solid #568378;outline-offset:4px;}
 .portfolio-card{transition:border-color .2s ease;}
-.portfolio-card:has(.company-link:hover),
-.portfolio-card:has(.company-link:focus-visible){background:#153a38;border-color:#153a38;color:#f8f8f4;}
-.portfolio-card:has(.company-link:hover) .portfolio-body p,
-.portfolio-card:has(.company-link:focus-visible) .portfolio-body p{color:#e2eee8;}
-.portfolio-card:has(.company-link:hover) .portfolio-body .arrow,
-.portfolio-card:has(.company-link:focus-visible) .portfolio-body .arrow{color:#ccebe1;}
-.portfolio-card:has(.company-link:hover) .card-tag,
-.portfolio-card:has(.company-link:focus-visible) .card-tag{visibility:hidden;}
+.portfolio-card:hover,
+.portfolio-card:focus-within{background:#153a38;border-color:#153a38;color:#f8f8f4;}
+.portfolio-card:hover .portfolio-body p,
+.portfolio-card:focus-within .portfolio-body p{color:#e2eee8;}
+.portfolio-card:hover .portfolio-body .arrow,
+.portfolio-card:focus-within .portfolio-body .arrow{color:#ccebe1;}
+.portfolio-card:hover .card-tag,
+.portfolio-card:focus-within .card-tag{visibility:hidden;}
 .company-page{padding-top:55px;padding-bottom:100px;}
 .company-back{display:inline-block;margin-bottom:48px;text-underline-offset:4px;}
 .company-visual{aspect-ratio:2/1;overflow:hidden;border:1px solid var(--line);}
