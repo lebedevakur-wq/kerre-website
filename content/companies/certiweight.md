@@ -1,4 +1,7 @@
 +++
+filterCategories = ["logistics"]
+overview = "Cargo weighing and port services."
+industry = "Port operations"
 title = "CertiWeight"
 layout = "company"
 url = "/portfolio/certiweight/"

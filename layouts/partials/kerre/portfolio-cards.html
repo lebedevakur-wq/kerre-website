@@ -1,100 +1,17 @@
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-portomundi.png" | relURL }}" alt="Portomundi logo">
-<span class="card-tag">Logistics platforms</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/portomundi").RelPermalink }}">Portomundi</a></h3>
-<p>Digital services supporting connections between logistics terminals and their customers.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-hakka.png" | relURL }}" alt="Hakka logo">
-<span class="card-tag">Transport collaboration</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/hakka").RelPermalink }}">Hakka</a></h3>
-<p>Platform supporting data sharing and coordination among container transport companies.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo logo-buffl" loading="lazy" src="{{ "images/logo-buffl.webp" | relURL }}" alt="Buffl logo">
-<span class="card-tag">Invested company</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/buffl").RelPermalink }}">Buffl</a></h3>
-<p>A digital market research platform that helps businesses validate products and marketing ideas through fast, real-time consumer surveys.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-inuits.jpeg" | relURL }}" alt="Inuits logo">
-<span class="card-tag">Founded in 2007</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/inuits").RelPermalink }}">Inuits</a></h3>
-<p>International technology services company with expertise in open-source infrastructure and applications.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-striktly.png" | relURL }}" alt="Striktly logo">
-<span class="card-tag">Enterprise software</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/striktly").RelPermalink }}">Striktly</a></h3>
-<p>Business software designed to bring customer management, administration and workflows together.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-dockflow.png" | relURL }}" alt="Dockflow logo">
-<span class="card-tag">Maritime logistics</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/dockflow").RelPermalink }}">Dockflow</a></h3>
-<p>Supply-chain visibility and shipment monitoring for international logistics.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-digitrans.png" | relURL }}" alt="DigiTrans logo">
-<span class="card-tag">AI & automation</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/digitrans").RelPermalink }}">DigiTrans</a></h3>
-<p>Intelligent tools that reduce manual data processing in transport operations.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-certiweight.png" | relURL }}" alt="CertiWeight logo">
-<span class="card-tag">Port operations</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/certiweight").RelPermalink }}">CertiWeight</a></h3>
-<p>Technology-enabled services for weighing and cargo handling logistics.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-askforce.png" | relURL }}" alt="askforce.one logo">
-<span class="card-tag">Information services</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/askforce-one").RelPermalink }}">askforce.one</a></h3>
-<p>Solutions that help businesses understand feedback and make better decisions.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic">
-<img loading="lazy" src="{{ "images/portfolio-inuits.jpg" | relURL }}" alt="">
-<span class="card-tag">Portfolio company</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/manco").RelPermalink }}">ManCo</a></h3>
-<p>A company in Kerre’s portfolio.</p>
-</div>
-</article>
+{{ range slice "portomundi" "hakka" "buffl" "inuits" "striktly" "dockflow" "digitrans" "certiweight" "askforce-one" "manco" }}
+{{ with site.GetPage (printf "companies/%s" .) }}
+{{ $key := .File.ContentBaseName }}
+<a class="portfolio-entry" href="{{ .RelPermalink }}" data-categories="{{ delimit .Params.filterCategories " " }}" aria-labelledby="company-{{ $key }}" aria-describedby="summary-{{ $key }}">
+  <div class="portfolio-entry-logo{{ if not .Params.imageclass }} portfolio-entry-unbranded{{ end }}"{{ if not .Params.imageclass }} aria-hidden="true"{{ end }}>
+    {{ if .Params.imageclass }}
+    <img class="{{ if eq $key "buffl" }}portfolio-entry-buffl{{ end }}" src="{{ printf "images/%s" .Params.image | relURL }}" alt="{{ .Title }} logo" loading="lazy" decoding="async">
+    {{ end }}
+  </div>
+  <div class="portfolio-entry-content">
+    <span class="portfolio-entry-category">{{ .Params.industry }}</span>
+    <div class="portfolio-entry-title"><h2 id="company-{{ $key }}">{{ .Title }}</h2><span class="portfolio-entry-arrow" aria-hidden="true">↗</span></div>
+    <p id="summary-{{ $key }}">{{ .Params.overview }}</p>
+  </div>
+</a>
+{{ end }}
+{{ end }}

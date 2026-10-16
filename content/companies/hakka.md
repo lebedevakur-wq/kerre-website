@@ -1,4 +1,7 @@
 +++
+filterCategories = ["logistics"]
+overview = "Connected container transport."
+industry = "Transport collaboration"
 title = "Hakka"
 layout = "company"
 url = "/portfolio/hakka/"

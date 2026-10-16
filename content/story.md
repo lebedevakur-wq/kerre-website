@@ -1,5 +1,6 @@
 +++
 title = "My Story"
-layout = "reference"
+layout = "story-redirect"
+canonicalPage = "about"
 reference = "story"
 +++

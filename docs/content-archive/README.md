@@ -1,0 +1,1 @@
+Original About and My Story templates retained before the navigation and biography consolidation. These files are source snapshots, not published pages. The original story partial also remains in layouts/partials/kerre/story.html.

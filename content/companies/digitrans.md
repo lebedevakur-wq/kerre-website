@@ -1,4 +1,7 @@
 +++
+filterCategories = ["logistics", "technology"]
+overview = "AI for logistics administration."
+industry = "AI & automation"
 title = "DigiTrans"
 layout = "company"
 url = "/portfolio/digitrans/"

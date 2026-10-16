@@ -1,4 +1,7 @@
 +++
+filterCategories = ["logistics"]
+overview = "Container shipment visibility."
+industry = "Maritime logistics"
 title = "Dockflow"
 layout = "company"
 url = "/portfolio/dockflow/"

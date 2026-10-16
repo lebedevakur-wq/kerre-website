@@ -1,4 +1,7 @@
 +++
+filterCategories = ["logistics"]
+overview = "Digital tools for logistics terminals."
+industry = "Logistics platforms"
 title = "Portomundi"
 layout = "company"
 url = "/portfolio/portomundi/"

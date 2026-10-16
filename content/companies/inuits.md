@@ -1,4 +1,7 @@
 +++
+filterCategories = ["technology"]
+overview = "Open-source technology services."
+industry = "Technology services"
 title = "Inuits"
 layout = "company"
 url = "/portfolio/inuits/"

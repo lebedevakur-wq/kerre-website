@@ -1,14 +1,16 @@
-<nav class="nav" aria-label="Main navigation">
+<nav class="nav{{ if .IsHome }} home-nav{{ end }}" aria-label="Main navigation">
 <div class="navin">
-<a class="logo" href="{{ "" | relURL }}">KRIS KERREMANS<span>.</span>
-</a>
+<a class="logo" href="{{ "" | relURL }}" aria-label="Kerre home">kerre<span>.</span></a>
+<button class="toggle" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false"><span aria-hidden="true">☰</span><span class="menu-label">Menu</span></button>
 <div class="navlinks" id="navlinks">
 {{ $current := .RelPermalink }}
-{{ range slice (dict "label" "Home" "url" "") (dict "label" "About" "url" "about/") (dict "label" "My Story" "url" "story/") (dict "label" "My Approach" "url" "approach/") (dict "label" "Portfolio" "url" "portfolio/") (dict "label" "Insights" "url" "insights/") }}
-<a class="navlink" href="{{ .url | relURL }}" {{ if eq $current (.url | relURL) }}aria-current="page"{{ end }}>{{ .label }}</a>
+{{ range hugo.Data.navigation }}
+{{ $url := .url | relURL }}
+{{ $active := eq $current $url }}
+{{ if and .url (strings.HasPrefix $current $url) }}{{ $active = true }}{{ end }}
+{{ if and (eq .label "About") (eq $.Params.layout "story-redirect") }}{{ $active = true }}{{ end }}
+<a class="navlink{{ if eq .label "Portfolio" }} nav-portfolio{{ end }}" href="{{ $url }}"{{ if $active }} aria-current="{{ if eq $current $url }}page{{ else }}location{{ end }}"{{ end }}>{{ .label }}</a>
 {{ end }}
-<a class="navlink" href="{{ "contact/" | relURL }}">Let's Connect ↗</a>
 </div>
-<button class="toggle" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">☰</button>
 </div>
 </nav>

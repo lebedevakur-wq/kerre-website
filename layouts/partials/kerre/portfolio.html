@@ -1,15 +1,24 @@
-<div class="container page-header">
+<div class="portfolio-overview">
+<header class="container portfolio-intro">
 <div class="eyebrow">Portfolio & Ventures</div>
-<h1>Companies, people and ideas Kris believes in.</h1>
+<h1>Companies, people and ideas Kerre believes in.</h1>
 <p>Technology businesses and industry platforms connected by an ambition to make established processes smarter, more transparent and more efficient.</p>
+</header>
+<section class="container portfolio-collection" aria-labelledby="portfolio-collection-title">
+<div class="portfolio-collection-header">
+<h2 id="portfolio-collection-title">Selected companies and involvements</h2>
+<p>Entrepreneurship, investment and collaboration.</p>
 </div>
-<section class="section soft" style="padding-top:65px">
-<div class="container">
-<div class="mini-head">
-<span class="eyebrow" style="margin:0">Selected companies and involvements</span>
-<span style="font-size:12px;color:#75877f">Historical roles and stakes to be confirmed</span>
+<div class="portfolio-filters" role="group" aria-label="Filter companies by industry" hidden>
+<button type="button" data-filter="all" aria-pressed="true" aria-controls="portfolio-companies">All Companies</button>
+<button type="button" data-filter="logistics" aria-pressed="false" aria-controls="portfolio-companies">Logistics &amp; Supply Chain</button>
+<button type="button" data-filter="technology" aria-pressed="false" aria-controls="portfolio-companies">Technology &amp; Software</button>
+<button type="button" data-filter="other" aria-pressed="false" aria-controls="portfolio-companies">Other Industries</button>
 </div>
-<div class="portfolio-grid">{{ partial "kerre/portfolio-cards.html" . }}</div>
-<p class="note" style="margin-top:30px">Portfolio descriptions illustrate a proposed website layout. Investment ownership, current roles, transaction terms and approved company branding must be checked before publication.</p>
-</div>
+<p class="portfolio-filter-status" role="status" aria-live="polite" aria-atomic="true"></p>
+<div class="portfolio-company-grid" id="portfolio-companies">{{ partial "kerre/portfolio-cards.html" . }}</div>
+<p class="portfolio-context">These companies reflect a range of founding, investment and business involvements over time. Inclusion does not imply a current equity holding.</p>
 </section>
+</div>
+{{ $filters := resources.Get "js/portfolio-filters.js" | minify | fingerprint }}
+<script src="{{ $filters.RelPermalink }}" integrity="{{ $filters.Data.Integrity }}" defer></script>

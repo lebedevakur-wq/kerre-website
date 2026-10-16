@@ -1,4 +1,7 @@
 +++
+filterCategories = ["other"]
+overview = "Consumer insights for businesses."
+industry = "Market research"
 title = "Buffl"
 layout = "company"
 url = "/portfolio/buffl/"

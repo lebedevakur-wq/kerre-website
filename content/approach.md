@@ -1,5 +1,5 @@
 +++
-title = "My Approach"
+title = "Approach"
 layout = "reference"
 reference = "approach"
 +++

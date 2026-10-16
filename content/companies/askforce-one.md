@@ -1,4 +1,7 @@
 +++
+filterCategories = ["other"]
+overview = "Feedback for better decisions."
+industry = "Information services"
 title = "askforce.one"
 layout = "company"
 url = "/portfolio/askforce-one/"

@@ -1,30 +1,7 @@
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-portomundi.png" | relURL }}" alt="Portomundi logo">
-<span class="card-tag">Logistics platforms</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/portomundi").RelPermalink }}">Portomundi</a></h3>
-<p>Digital services supporting connections between logistics terminals and their customers.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo" loading="lazy" src="{{ "images/logo-inuits.jpeg" | relURL }}" alt="Inuits logo">
-<span class="card-tag">Founded in 2007</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/inuits").RelPermalink }}">Inuits</a></h3>
-<p>International technology services company with expertise in open-source infrastructure and applications.</p>
-</div>
-</article>
-<article class="portfolio-card">
-<div class="portfolio-pic portfolio-logo">
-<img class="company-logo logo-buffl" loading="lazy" src="{{ "images/logo-buffl.webp" | relURL }}" alt="Buffl logo">
-<span class="card-tag">Invested company</span>
-</div>
-<div class="portfolio-body">
-<h3><a class="company-link" href="{{ (site.GetPage "companies/buffl").RelPermalink }}">Buffl</a></h3>
-<p>A digital market research platform that helps businesses validate products and marketing ideas through fast, real-time consumer surveys.</p>
-</div>
-</article>
+{{ range slice "portomundi" "inuits" "buffl" }}
+{{ with site.GetPage (printf "companies/%s" .) }}
+<a class="investment-tile investment-tile-with-logo" href="{{ .RelPermalink }}" aria-label="{{ .Title }} company profile">
+<span class="investment-tile-logo"><img{{ if eq .File.ContentBaseName "buffl" }} class="investment-tile-buffl"{{ end }} src="{{ printf "images/%s" .Params.image | relURL }}" alt="" loading="lazy" decoding="async"></span>
+</a>
+{{ end }}
+{{ end }}

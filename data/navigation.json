@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Home",
+    "url": ""
+  },
+  {
+    "label": "Portfolio",
+    "url": "portfolio/"
+  },
+  {
+    "label": "Approach",
+    "url": "approach/"
+  },
+  {
+    "label": "About",
+    "url": "about/"
+  },
+  {
+    "label": "Insights",
+    "url": "insights/"
+  },
+  {
+    "label": "Contact",
+    "url": "contact/"
+  }
+]

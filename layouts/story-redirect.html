@@ -1,0 +1,12 @@
+{{ define "head" }}
+<meta http-equiv="refresh" content="0;url={{ (site.GetPage "about").RelPermalink }}#history">
+<meta name="robots" content="noindex, follow">
+{{ end }}
+{{ define "main" }}
+<section class="container page-header content-page">
+<div class="eyebrow">About Kerre</div>
+<h1>The story continues on About.</h1>
+<p>Kris's full entrepreneurial history is now part of the About page.</p>
+<a class="btn" href="{{ (site.GetPage "about").RelPermalink }}#history">Read the story</a>
+</section>
+{{ end }}

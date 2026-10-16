@@ -1,0 +1,47 @@
+<div class="container page-header">
+<div class="eyebrow">My Story</div>
+<h1>From an attic in Antwerp to backing the next generation.</h1>
+<p>Some things change as you build a business. The curiosity to understand how things work, and how they could work better, never did.</p>
+</div>
+<img class="banner" src="{{ "images/port-black-and-white.png" | relURL }}" alt="Black-and-white aerial view of a ship repair yard with dry docks, cranes and tugboats" width="1514" height="788">
+<section class="section story-chapters">
+<div class="container chapters">
+<div class="chapter">
+<div class="number">CHAPTER 01/<br>CHILDHOOD</div>
+<div>
+<h3>A connection to the Port of Antwerp.</h3>
+<p>My father worked as a ship repairer. As a child, I often joined him on drives through the port in his old Citroën, listening to stories of the ships, the people and the work that kept everything moving. The port fascinated me, and those moments stayed with me. I didn't know exactly what role I would play in that world, but I knew I wanted to be part of it.</p>
+</div>
+</div>
+<div class="chapter">
+<div class="number">CHAPTER 02/<br>INUITS</div>
+<div>
+<h3>Five people. One shared ambition.</h3>
+<p>In 2007, four fellow IT professionals and I founded Inuits in an attic in Antwerp. We believed in the possibilities of open-source technology and wanted to build something of our own. That small beginning became the foundation of an international technology business.</p>
+</div>
+</div>
+<div class="chapter">
+<div class="number">CHAPTER 03/<br>LOGISTICS</div>
+<div>
+<h3>Technology meets the real world.</h3>
+<p>As Inuits evolved, I found a way back into the maritime world. Logistics was, and remains, full of complex processes and disconnected systems. The opportunity was to develop technology around the real needs of people working in the sector.</p>
+</div>
+</div>
+<div class="chapter">
+<div class="number">CHAPTER 04/<br>COLLABORATION</div>
+<div>
+<h3>Progress is built together.</h3>
+<p>Projects such as Hakka showed how better information sharing could make transport more efficient. I learned that the greatest impact often comes from connecting people and companies facing the same challenges.</p>
+</div>
+</div>
+<div class="chapter">
+<div class="number">CHAPTER 05/<br>INVESTING</div>
+<div>
+<h3>From building to backing.</h3>
+<p>As I became involved in other technology ventures, investing felt like a natural extension of entrepreneurship: an opportunity to support founders with experience, capital and access to a network. The motivation remains the same - helping people turn important ideas into lasting businesses.</p>
+</div>
+</div>
+</div>
+</section>
+{{ $storyScript := resources.Get "js/story.js" | minify | fingerprint }}
+<script src="{{ $storyScript.RelPermalink }}" integrity="{{ $storyScript.Data.Integrity }}" defer></script>

@@ -3,6 +3,11 @@
 <div class="eyebrow light-eyebrow">Keep building</div>
 <h2>Good ideas create opportunities. Let's build what comes next.</h2>
 <a class="btn light" href="{{ "contact/" | relURL }}">Let's Connect ↗</a>
+<nav class="footer-pages" aria-label="Explore Kerre">
+{{ range hugo.Data.navigation }}
+<a href="{{ .url | relURL }}">{{ .label }}</a>
+{{ end }}
+</nav>
 <div class="footer-bottom">
 <div>KRIS KERREMANS © {{ now.Year }}</div>
 <div>ENTREPRENEUR · FOUNDER · ANGEL INVESTOR</div>

@@ -1,4 +1,7 @@
 +++
+filterCategories = []
+overview = "A company involvement with Kerre."
+industry = "Industry not specified"
 title = "ManCo"
 layout = "company"
 url = "/portfolio/manco/"

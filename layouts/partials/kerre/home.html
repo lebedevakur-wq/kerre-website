@@ -1,39 +1,42 @@
-<section class="hero">
-<div class="inside">
-<div class="eyebrow light-eyebrow">Entrepreneur · Founder · Angel Investor</div>
-<h1>Building businesses.<br>
-<em>Backing ambition.</em>
-</h1>
-<figure class="hero-quote">
-<blockquote><p>“I believe great businesses are built by people who dare to challenge the way things work. I support ambitious founders with capital, experience and connections.”</p></blockquote>
-<figcaption>— Kris Kerremans</figcaption>
-</figure>
-<a class="btn light kerre-portfolio-btn" href="{{ "portfolio/" | relURL }}">Explore the Portfolio <span>↗</span>
-</a>
-</div>
-<div class="hero-foot">
-<span>BASED IN ANTWERP, BELGIUM</span>
-<span>SCROLL TO DISCOVER ↓</span>
+<div class="investment-home">
+<section class="investment-hero" aria-labelledby="investment-title">
+<div class="container">
+<div class="investment-hero-top"><span class="eyebrow">Private investments</span></div>
+<h1 id="investment-title">Built by experience.<br><span>Driven by ambition.</span></h1>
+<p class="investment-intro">Partnering with ambitious entrepreneurs to build lasting businesses.</p>
+<a class="btn btn-accent" href="{{ "portfolio/" | relURL }}">Explore Portfolio <span aria-hidden="true">↗</span></a>
 </div>
 </section>
-<section class="section">
-<div class="container split">
-<div class="copy">
-<div class="eyebrow">01 / A little about Kerre</div>
-<h2>Entrepreneur first.<br>Investor by conviction.</h2>
-<p>Kris Kerremans started Inuits in 2007 with four fellow IT professionals in an attic in Antwerp. That experience continues to shape how he sees businesses and the people behind them.</p>
-<p>Today, he supports entrepreneurs using technology to solve meaningful challenges, especially where innovation and real-world experience meet.</p>
-<a class="btn kerre-about-btn" href="{{ "about/" | relURL }}">Get to know Kerre <span>↗</span>
-</a>
-</div>
-<img class="photo kris-portrait" src="{{ "images/kris-kerremans.png" | relURL }}" alt="Kris Kerremans sitting on a classic Ford Mustang" loading="lazy">
-</div>
-</section>
-<section class="section soft">
+<section class="section home-investments">
 <div class="container">
 <div class="topline">
 <div>
-<div class="eyebrow">02 / My philosophy</div>
+<div class="eyebrow">Selected investments</div>
+<h2>Companies shaping tomorrow.</h2>
+</div>
+</div>
+<div class="portfolio-grid">{{ partial "kerre/portfolio-home.html" . }}</div>
+<div style="margin-top:40px">
+<a class="btn" href="{{ "portfolio/" | relURL }}">Explore All Companies <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+</section>
+<section class="section home-experience founder-intro" aria-labelledby="founder-intro-title">
+<div class="container founder-intro-layout">
+<div class="founder-intro-copy">
+<h2 class="founder-intro-title" id="founder-intro-title"><span>Entrepreneur first.</span><span>Investor by</span><span>conviction.</span></h2>
+<p>From building technology businesses to backing ambitious entrepreneurs. Kris Kerremans brings firsthand experience, strategic insight and a long-term perspective to every partnership.</p>
+<a class="btn founder-intro-cta" href="{{ "about/" | relURL }}">Discover Kerre <span aria-hidden="true">→</span></a>
+</div>
+<img class="founder-intro-photo" src="{{ "images/kris-kerremans.png" | relURL }}" alt="Kris Kerremans sitting on a classic Ford Mustang" width="410" height="615" loading="lazy" decoding="async">
+</div>
+</section>
+<div class="container home-foundation"><div class="investment-foundation"><span>Technology with purpose</span><span>Partnerships for the long term</span><span>Founder experience since 2007</span></div></div>
+<section class="section soft home-philosophy">
+<div class="container">
+<div class="topline">
+<div>
+<div class="eyebrow">03 / Investment philosophy</div>
 <h2>Capital is only<br>the beginning.</h2>
 </div>
 </div>
@@ -59,20 +62,6 @@
 </div>
 </div>
 </section>
-<section class="section">
-<div class="container">
-<div class="topline">
-<div>
-<div class="eyebrow">03 / Selected companies</div>
-<h2>Backing ideas that<br>move industries forward.</h2>
-</div>
-</div>
-<div class="portfolio-grid">{{ partial "kerre/portfolio-home.html" . }}</div>
-<div style="margin-top:40px">
-<a class="btn" href="{{ "portfolio/" | relURL }}">View All Companies <span aria-hidden="true">↗</span></a>
-</div>
-</div>
-</section>
 <section class="quote-block">
 <div class="container">
 <div class="eyebrow">The belief behind the work</div>
@@ -80,4 +69,4 @@
 <small>PROPOSED BRAND STATEMENT — FOR KRIS TO APPROVE</small>
 </div>
 </section>
-
+</div>

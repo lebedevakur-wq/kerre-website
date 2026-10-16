@@ -1,4 +1,7 @@
 +++
+filterCategories = ["technology"]
+overview = "Integrated business software."
+industry = "Enterprise software"
 title = "Striktly"
 layout = "company"
 url = "/portfolio/striktly/"
