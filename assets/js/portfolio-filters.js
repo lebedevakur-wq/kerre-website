@@ -24,6 +24,8 @@
     buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
 
     const visible = cards.filter(card => !card.hidden);
+    // Explicit filtering takes priority over an entrance waiting farther down the page.
+    document.dispatchEvent(new CustomEvent('kerre:portfolio-filter', { detail: { cards: visible } }));
     status.textContent = `${visible.length} ${visible.length === 1 ? 'company' : 'companies'} shown: ${button.textContent.trim()}.`;
 
     // Animate incoming cards and the movement of cards that remain visible.

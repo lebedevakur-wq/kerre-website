@@ -41,4 +41,7 @@ document.addEventListener('keydown', event => {
 document.addEventListener('click', event => { if (!event.target.closest('.nav')) closeNavigation(); });
 document.addEventListener('focusin', event => { if (!event.target.closest('.nav')) closeNavigation(); });
 window.matchMedia('(min-width: 901px)').addEventListener('change', () => closeNavigation());
-</script></body></html>
+</script>
+{{ $reveals := resources.Get "js/reveals.js" | minify | fingerprint }}
+<script src="{{ $reveals.RelPermalink }}" integrity="{{ $reveals.Data.Integrity }}" defer></script>
+</body></html>
