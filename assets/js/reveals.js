@@ -11,7 +11,7 @@
   const candidates = Array.from(main.querySelectorAll(`${units}, ${details}`));
   const targets = candidates.filter(element => {
     const unit = element.closest(units);
-    return (!unit || unit === element) && !element.closest('[hidden], .portfolio-filter-status, .contact-privacy');
+    return (!unit || unit === element) && !element.closest('[hidden], .portfolio-filter-status, .contact-privacy, .network-details, .approach-interests');
   });
   const pending = new Set(targets);
   const running = new Map();

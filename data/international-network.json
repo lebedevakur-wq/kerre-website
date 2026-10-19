@@ -1,0 +1,7 @@
+[
+  {"id":"belgium","name":"Belgium","context":"Kerre’s home base and investment network.","link":"portfolio/","linkLabel":"Explore the portfolio"},
+  {"id":"poland","name":"Poland","context":"International business connection through the Inuits Group.","link":"portfolio/inuits-taas/","linkLabel":"Discover Inuits Talent-as-a-Service"},
+  {"id":"czech-republic","name":"Czech Republic","context":"International business connection through the Inuits Group.","link":"portfolio/inuits/","linkLabel":"Discover Inuits"},
+  {"id":"ukraine","name":"Ukraine","context":"International business connection through the Inuits Group.","link":"portfolio/inuits/","linkLabel":"Discover Inuits"},
+  {"id":"canada","name":"Canada","context":"Connection through Portomundi.","link":"portfolio/portomundi/","linkLabel":"Discover Portomundi"}
+]

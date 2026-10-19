@@ -1,4 +1,4 @@
-{{ range slice "portomundi" "hakka" "buffl" "inuits" "striktly" "dockflow" "digitrans" "certiweight" "askforce-one" "manco" }}
+{{ range slice "portomundi" "hakka" "buffl" "inuits" "inuits-taas" "striktly" "dockflow" "digitrans" "certiweight" "askforce-one" }}
 {{ with site.GetPage (printf "companies/%s" .) }}
 {{ partial "kerre/company-tile.html" (dict "company" . "headingLevel" 2) }}
 {{ end }}

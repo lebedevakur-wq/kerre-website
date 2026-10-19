@@ -112,6 +112,7 @@ img { display: block; max-width: 100%; }
 .btn.cta--on-dark:hover { background: var(--sage); border-color: var(--sage); color: var(--ink); }
 .btn.cta--accent { background: var(--ink); color: var(--on-dark); }
 .btn.cta--accent:hover { border-color: var(--acid); }
+.btn.cta--portfolio:is(:hover, :focus-visible, :active) { background: var(--acid); border-color: var(--acid); color: var(--ink); }
 .btn:disabled, .btn:disabled:hover { transform: none; background: var(--body); border-color: var(--body); color: var(--on-dark); cursor: not-allowed; }
 .about-story-link, .company-back, .editorial-back, .home-portfolio-link, .approach-portfolio-link { display: inline-flex; align-items: center; gap: var(--s2); font-size: var(--support-size); line-height: 1.6; }
 
@@ -131,16 +132,66 @@ img { display: block; max-width: 100%; }
 .founder-intro-title { font-size: var(--h2); margin-bottom: var(--s3); }
 .founder-intro-title > span { display: block; }
 .founder-intro-copy p { max-width: 480px; margin: 0; }
-.founder-intro-photo { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center 48%; clip-path: inset(0 0 2px 0); }
+.founder-intro-copy p + p, .founder-intro-copy .partnership-link { margin-top: var(--s3); }
+.founder-intro-photo { width: 100%; height: auto; aspect-ratio: 1000/615; object-fit: cover; object-position: center 48%; clip-path: inset(0 0 2px 0); }
 .philosophy-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--s4); align-items: start; }
 .philosophy-principle { min-width: 0; padding-top: 20px; border-top: 1px solid var(--line); }
 .philosophy-number { display: block; font-size: var(--label-size); color: var(--muted); line-height: 1.6; margin-bottom: var(--s2); }
 .philosophy-principle h3 { font-size: var(--h3); }
+.partnership-link { display: inline-flex; align-items: center; gap: var(--s2); min-height: 44px; font-size: var(--support-size); }
+#introductions { scroll-margin-top: 104px; }
 .quote-block blockquote, .founder-belief-quote blockquote { margin: 0; max-width: 1000px; font: 600 var(--h2)/1.25 Manrope, Arial, sans-serif; letter-spacing: -.035em; text-wrap: balance; }
 .quote-block small { display: block; margin-top: var(--s3); font-size: var(--label-size); color: var(--body); }
 .founder-belief-quote blockquote p { color: var(--ink); font: inherit; margin: 0; }
 .founder-belief-quote figcaption { margin-top: var(--s3); font-size: var(--support-size); color: var(--body); }
 @supports (grid-template-rows: subgrid) { .philosophy-principle { display: grid; grid-template-rows: subgrid; grid-row: span 2; } }
+
+/* International network: geographic context with accessible country controls. */
+.international-network { background: var(--paper); }
+.network-heading { margin-bottom: var(--s6); }
+.network-heading h2 { max-width: 860px; }
+.network-layout { display: grid; grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr); gap: var(--s8); align-items: start; }
+.network-copy > p { max-width: 400px; }
+.network-copy { min-width: 0; }
+.network-playback { min-height: 44px; padding: 10px 0; margin-top: var(--s2); border: 0; background: transparent; color: var(--muted); font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+.network-controls { display: grid; grid-template-columns: 1fr; gap: 0; margin-top: var(--s4); }
+.network-controls button { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 48px; padding: 12px 0; background: transparent; border: 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 14px; line-height: 1.5; text-align: left; transition: color var(--motion), border-color var(--motion); }
+.network-controls button:hover, .network-controls button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+.network-control-dot { width: 6px; height: 6px; flex: 0 0 6px; background: var(--sage); border: 1px solid var(--muted); border-radius: 50%; }
+.network-controls button[aria-pressed="true"] .network-control-dot { background: var(--ink); border-color: var(--ink); }
+.network-home-label { margin-left: auto; font-size: 11px; color: var(--muted); }
+.network-visual { min-width: 0; }
+.network-map-frame { padding-block: var(--s2); }
+.network-map { display: block; width: 100%; height: auto; overflow: hidden; }
+.network-land { fill: #FFFFFF; stroke: var(--line); stroke-width: .8; }
+.network-region { fill: var(--white); stroke: var(--line); stroke-width: .8; transition: fill var(--motion); }
+.network-region.is-active { fill: var(--ink); }
+.network-connection { fill: none; stroke: var(--muted); stroke-width: 1; stroke-opacity: .35; vector-effect: non-scaling-stroke; pointer-events: none; }
+.network-connection.is-active { stroke: var(--ink); stroke-opacity: .8; }
+.network-node-hit { fill: transparent; }
+.network-node-ring { fill: var(--paper); stroke: var(--ink); stroke-width: 1.3; }
+.network-node-dot { fill: var(--ink); }
+.network-node[data-network-country="belgium"] .network-node-ring { fill: var(--ink); }
+.network-node[data-network-country="belgium"] .network-node-dot { fill: var(--acid); }
+.network-node.is-active .network-node-ring { stroke-width: 2; }
+.network-node.is-active .network-node-dot { fill: var(--acid); }
+.network-node.is-active .network-node-ring { fill: var(--ink); }
+.network-geography-label { font: 500 10px 'DM Sans', Arial, sans-serif; letter-spacing: .16em; fill: var(--muted); }
+.network-enhanced .network-location { cursor: pointer; }
+.network-details { min-height: 150px; border-top: 1px solid var(--line); padding-top: var(--s3); }
+.network-detail + .network-detail { margin-top: var(--s3); }
+.network-enhanced .network-detail { margin-top: 0; }
+.network-detail h3 { font-size: var(--card-title); margin-bottom: var(--s1); }
+.network-detail p { font-size: var(--support-size); margin-bottom: var(--s2); }
+.network-detail a { font-size: var(--support-size); }
+@media (max-width: 900px) {
+  .network-layout { grid-template-columns: 1fr; gap: var(--s4); }
+  .network-copy > p { max-width: 650px; }
+  .network-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s3); }
+  .network-controls button { min-height: 48px; }
+  .network-home-label { display: none; }
+  .network-heading { margin-bottom: var(--s4); }
+}
 
 /* Portfolio: reusable, logo-led cards and accessible filtering. */
 .portfolio-collection { padding-bottom: var(--section-space); }
@@ -152,6 +203,7 @@ img { display: block; max-width: 100%; }
 .portfolio-entry:hover, .portfolio-entry:focus-visible { transform: translateY(-3px); border-color: var(--ink); }
 .portfolio-entry-logo { display: flex; align-items: center; justify-content: center; height: 176px; margin-inline: var(--s3); border-bottom: 1px solid var(--line); overflow: hidden; }
 .portfolio-entry-logo img { width: auto; height: auto; max-width: 85%; max-height: 80px; object-fit: contain; }
+.portfolio-entry-logo img[src$="/logo-inuits-taas.svg"] { width: 85%; height: 80px; object-fit: contain; object-position: center; }
 .portfolio-entry-logo img.portfolio-entry-buffl { width: 85%; height: 80px; object-fit: cover; object-position: center; }
 .portfolio-entry-unbranded { height: 152px; margin-top: var(--s3); background: var(--paper); border: 0; }
 .portfolio-entry-content { padding: var(--s3); }
@@ -212,15 +264,15 @@ img { display: block; max-width: 100%; }
 .approach-theme p { margin-bottom: var(--s2); }
 .approach-theme p:last-child { margin-bottom: 0; }
 .approach-interests-heading { display: block; margin-bottom: var(--s6); }
-.approach-interests-heading h2 { max-width: 900px; margin-bottom: var(--s3); }
-.approach-interests-heading > p { max-width: 650px; margin: 0; }
-.approach-interest-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--grid-gap); align-items: start; }
-.approach-interest-grid > div { border-top: 1px solid var(--line-dark); padding-top: var(--s3); }
-.approach-interest-grid h3 { margin-bottom: var(--s3); }
-.approach-interest-grid p { margin: 0; }
+.approach-interests-heading h2 { max-width: 900px; margin-bottom: var(--s3); font-size: clamp(32px, 4vw, 48px); }
+.approach-interests-heading > p { max-width: 740px; margin: 0; font-size: 16px; }
+.approach-interest-grid { display: grid; grid-template-columns: 1fr; gap: var(--s4); align-items: start; }
+.approach-interest-grid > article { min-width: 0; border-top: 1px solid var(--line-dark); padding-top: var(--s3); }
+.approach-interest-grid h3 { margin-bottom: var(--s2); font-size: 24px; line-height: 1.35; }
+.approach-interest-grid p { margin: 0; font-size: 16px; line-height: 1.6; }
 .approach-interest-cta { margin-top: 40px; }
 .approach-invitation h2 { margin-bottom: var(--s3); }
-.partnership-photo { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: contain; }
+.partnership-photo { width: 100%; height: auto; object-fit: contain; }
 
 /* Insights: consistent cards, a feature story and comfortable long-form reading. */
 .editorial-collection { padding-bottom: var(--section-space); }
@@ -363,4 +415,21 @@ img { display: block; max-width: 100%; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .btn:hover, .portfolio-entry:hover, .portfolio-entry:focus-visible, .portfolio-entry:hover .portfolio-entry-arrow, .portfolio-entry:focus-visible .portfolio-entry-arrow { transform: none; }
+}
+
+/* The partnership invitation leads; the network is supporting context. */
+.founder-intro-copy > .btn { margin-top: var(--s3); }
+.investment-home .international-network { padding-block: var(--s6); }
+.investment-home .network-heading { margin-bottom: var(--s4); }
+.investment-home .network-heading h2 { font-size: clamp(26px, 2.4vw, 32px); }
+.investment-home .network-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s6); }
+.investment-home .network-visual { width: 100%; max-width: 480px; justify-self: end; }
+.investment-home .network-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s3); margin-top: var(--s3); }
+.investment-home .network-home-label { font-size: 10px; }
+.investment-home .network-details { min-height: 132px; padding-top: var(--s2); }
+.investment-home .network-node-ring { stroke-width: 1; }
+.investment-home .network-node.is-active .network-node-ring { stroke-width: 1.5; }
+@media (max-width: 900px) {
+  .investment-home .network-layout { grid-template-columns: 1fr; gap: var(--s3); }
+  .investment-home .network-visual { justify-self: start; }
 }

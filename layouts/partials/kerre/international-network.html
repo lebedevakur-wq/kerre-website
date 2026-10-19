@@ -1,0 +1,32 @@
+<section class="section international-network" aria-labelledby="international-network-title">
+<div class="container">
+<header class="network-heading">
+<div class="eyebrow">International Network</div>
+<h2 id="international-network-title">Our international connections.</h2>
+</header>
+<div class="network-layout" data-international-network>
+<div class="network-copy">
+<p>Kerre’s network extends beyond Belgium, with strong business connections and portfolio relationships across Europe and North America.</p>
+<div class="network-controls" role="group" aria-label="Explore international connections" hidden>
+{{ range index hugo.Data "international-network" }}
+<button type="button" data-network-select="{{ .id }}" aria-controls="network-details" aria-pressed="{{ if eq .id "belgium" }}true{{ else }}false{{ end }}"><span class="network-control-dot" aria-hidden="true"></span>{{ .name }}{{ if eq .id "belgium" }}<span class="network-home-label">Home base</span>{{ end }}</button>
+{{ end }}
+</div>
+<button class="network-playback" type="button" data-network-pause aria-pressed="false" hidden>Pause country rotation</button>
+</div>
+<div class="network-visual">
+<div class="network-map-frame">{{ partial "kerre/network-map.html" . }}</div>
+<div class="network-details" id="network-details" aria-live="off" aria-atomic="true">
+{{ range index hugo.Data "international-network" }}
+<div class="network-detail" id="network-{{ .id }}" data-network-detail="{{ .id }}">
+<h3>{{ .name }}</h3><p>{{ .context }}</p>
+<a href="{{ .link | relURL }}">{{ .linkLabel }} <span aria-hidden="true">→</span></a>
+</div>
+{{ end }}
+</div>
+</div>
+</div>
+</div>
+</section>
+{{ $network := resources.Get "js/international-network.js" | minify | fingerprint }}
+<script src="{{ $network.RelPermalink }}" integrity="{{ $network.Data.Integrity }}" defer></script>
