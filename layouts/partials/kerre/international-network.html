@@ -1,12 +1,11 @@
 <section class="section international-network" aria-labelledby="international-network-title">
 <div class="container">
 <header class="network-heading">
-<div class="eyebrow">International Network</div>
-<h2 id="international-network-title">Our international connections.</h2>
+<h2 id="international-network-title">Connected beyond borders.</h2>
+<p>An international network connecting Belgium with Poland, the Czech Republic, Ukraine and Canada.</p>
 </header>
 <div class="network-layout" data-international-network>
 <div class="network-copy">
-<p>Kerre’s network extends beyond Belgium, with strong business connections and portfolio relationships across Europe and North America.</p>
 <div class="network-controls" role="group" aria-label="Explore international connections" hidden>
 {{ range index hugo.Data "international-network" }}
 <button type="button" data-network-select="{{ .id }}" aria-controls="network-details" aria-pressed="{{ if eq .id "belgium" }}true{{ else }}false{{ end }}"><span class="network-control-dot" aria-hidden="true"></span>{{ .name }}{{ if eq .id "belgium" }}<span class="network-home-label">Home base</span>{{ end }}</button>

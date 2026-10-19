@@ -1,48 +1,47 @@
 <div class="investment-home">
 <section class="investment-hero" aria-labelledby="investment-title">
 <div class="container">
-<div class="investment-hero-top"><span class="eyebrow">Private investments</span></div>
 <h1 id="investment-title">Built by experience.<br><span>Driven by ambition.</span></h1>
-<p class="investment-intro">Partnering with ambitious entrepreneurs and co-investors to build lasting businesses.</p>
+<p class="investment-intro">Kerre brings entrepreneurs and co-investors together to build lasting businesses.</p>
 </div>
 </section>
-<section class="section home-investments home-selected" aria-labelledby="home-selected-title">
+<section class="section home-selected" aria-labelledby="home-selected-title">
 <div class="container">
 <header class="home-selected-heading">
-<div class="eyebrow">PORTFOLIO</div>
-<h2 id="home-selected-title">Backing ideas that move industries forward.</h2>
-<p>From building technology businesses to backing ambitious entrepreneurs. Kerre brings firsthand experience, strategic insight and a long-term perspective to every partnership.</p>
+<h2 id="home-selected-title">Where industries and technology meet.</h2>
+<p class="home-sectors">Logistics · Maritime · Fintech · SaaS</p>
 </header>
-<div class="home-selected-cta">{{ partial "kerre/cta.html" (dict "action" "portfolio") }}</div>
+<div class="home-logo-grid" data-logo-carousel aria-label="Selected portfolio companies">
+{{ range slice "portomundi" "hakka" "inuits" "striktly" "dockflow" "digitrans" "buffl" "inuits-taas" "certiweight" "askforce-one" }}
+{{ with site.GetPage (printf "companies/%s" .) }}
+<a class="home-logo-{{ .File.ContentBaseName }}" href="{{ .RelPermalink }}" aria-label="{{ .Title }} company profile"><img src="{{ printf "images/%s" .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" decoding="async"></a>
+{{ end }}
+{{ end }}
+</div>
+<div class="home-selected-cta"><a class="btn cta cta--portfolio" href="{{ "portfolio/" | relURL }}">Explore Portfolio <span aria-hidden="true">→</span></a></div>
 </div>
 </section>
 <section class="section home-experience founder-intro" aria-labelledby="founder-intro-title">
 <div class="container founder-intro-layout">
 <div class="founder-intro-copy">
-<div class="eyebrow">Co-investment partnerships</div>
-<h2 class="founder-intro-title" id="founder-intro-title">Capital is only the beginning.</h2>
-<p>Lasting value is built through experience, trust and strong partnerships.</p>
-<p>Kerre connects with entrepreneurs and like-minded co-investors who share expertise, opportunities and a long-term commitment to building successful businesses.</p>
-<a class="btn cta cta--on-dark" href="{{ "contact/" | relURL }}#introductions">Connect as a co-investor <span aria-hidden="true">→</span></a>
+<h2 id="founder-intro-title">Investing together.<br>Building lasting value.</h2>
+<p>Kerre welcomes conversations with entrepreneurs and like-minded co-investors interested in investing together in startups and growing businesses.</p>
+<a class="btn cta" href="{{ "contact/" | relURL }}#introductions">Connect as a Co-Investor <span aria-hidden="true">→</span></a>
 </div>
 <img class="founder-intro-photo" src="{{ "images/penguin-about.png" | relURL }}" alt="A penguin standing on coastal rocks beside the sea" width="1000" height="615" loading="lazy" decoding="async">
 </div>
 </section>
 {{ partial "kerre/international-network.html" . }}
-<section class="home-philosophy" aria-label="Investment principles">
-<div class="container philosophy-container">
-<div class="philosophy-principles">
-<article class="philosophy-principle"><span class="philosophy-number">01</span><h3>People first.</h3></article>
-<article class="philosophy-principle"><span class="philosophy-number">02</span><h3>Technology with purpose.</h3></article>
-<article class="philosophy-principle"><span class="philosophy-number">03</span><h3>Better together.</h3></article>
-</div>
-<div class="philosophy-cta">{{ partial "kerre/cta.html" (dict "action" "approach") }}</div>
-</div>
-</section>
-<section class="quote-block">
+<section class="section home-philosophy" aria-label="Investment principles">
 <div class="container">
-<div class="eyebrow">The belief behind the work</div>
-<blockquote>“Good ideas create opportunities. Great partnerships create progress.”</blockquote>
+<div class="philosophy-principles">
+<article class="philosophy-principle"><h3>People first.</h3></article>
+<article class="philosophy-principle"><h3>Technology with purpose.</h3></article>
+<article class="philosophy-principle"><h3>Better together.</h3></article>
+</div>
+<div class="philosophy-cta"><a class="btn cta" href="{{ "approach/" | relURL }}">Discover the Approach <span aria-hidden="true">→</span></a></div>
 </div>
 </section>
 </div>
+{{ $logos := resources.Get "js/home-logos.js" | minify | fingerprint }}
+<script src="{{ $logos.RelPermalink }}" integrity="{{ $logos.Data.Integrity }}" defer></script>

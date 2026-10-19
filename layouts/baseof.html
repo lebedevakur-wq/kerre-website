@@ -16,7 +16,7 @@
 {{ hugo.Generator }}
 {{ block "head" . }}{{ end }}
 {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="Kerre">{{ end }}
-</head><body>
+</head><body{{ if .IsHome }} class="kerre-home"{{ end }}>
 <a class="skip-link" href="#main">Skip to content</a>
 {{ partial "kerre/nav.html" . }}
 <main id="main">{{ block "main" . }}{{ end }}</main>

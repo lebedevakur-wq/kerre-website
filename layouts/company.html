@@ -9,7 +9,9 @@
       <div class="eyebrow">{{ .Params.category }}</div>
       <h1>{{ .Title }}</h1>
       <p class="lead">{{ .Description }}</p>
+      <details class="editorial-details company-background"><summary>Company background</summary>
       {{ .Content }}
+      </details>
       {{ with .Params.website }}
       <a class="btn" href="{{ . }}">Visit {{ $.Title }} website <span aria-hidden="true">↗</span></a>
       {{ end }}
