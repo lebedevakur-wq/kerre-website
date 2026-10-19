@@ -16,4 +16,4 @@ Based in Kraków, Inuits Talent-as-a-Service (TaaS) embeds senior engineers dire
 
 Its services include staff augmentation, dedicated nearshore development teams and recruitment. With roots in open-source technology and DevOps, the approach emphasises direct communication, engineering ownership and long-term partnerships.
 
-TaaS is part of the Inuits Group, the technology business I co-founded in Antwerp in 2007. It extends the group's engineering expertise by connecting international businesses with talent in Poland.
+TaaS is part of the Inuits Group, the technology business Kris Kerremans co-founded in Antwerp in 2007. It extends the group's engineering expertise by connecting international businesses with talent in Poland.

@@ -14,6 +14,6 @@ website = "https://dockflow.com/"
 
 Dockflow develops technology that helps logistics professionals follow shipments, coordinate information and gain greater visibility into container transport.
 
-My investment as a minority shareholder supported the company's plans to expand its customer base, develop its technology and strengthen its team.
+Kris Kerremans' investment as a minority shareholder supported the company's plans to expand its customer base, develop its technology and strengthen its team.
 
-Dockflow represents the type of innovation I find compelling: using technology to address practical challenges in an industry with significant potential for digital transformation.
+Dockflow represents the type of innovation Kerre values: using technology to address practical challenges in an industry with significant potential for digital transformation.

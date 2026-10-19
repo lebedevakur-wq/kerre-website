@@ -7,26 +7,33 @@
   const track = document.createElement('div');
   track.className = 'home-logo-track';
   const slides = [];
-  // Advance four positions, wrapping the company list without empty spaces.
-  let start = 0;
-  do {
-    const slide = document.createElement('div');
-    slide.className = 'home-logo-slide';
-    for (let i = 0; i < 4; i++) {
-      const logo = logos[(start + i) % logos.length].cloneNode(true);
-      logo.querySelector('img').loading = 'eager';
-      slide.append(logo);
-    }
-    track.append(slide);
-    slides.push(slide);
-    start = (start + 4) % logos.length;
-  } while (start !== 0);
-  // A final copy makes the last-to-first movement continue in the same direction.
-  const ending = slides[0].cloneNode(true);
-  ending.inert = true;
-  ending.setAttribute('aria-hidden', 'true');
-  track.append(ending);
-  carousel.replaceChildren(track);
+  const mobile = matchMedia('(max-width: 600px)');
+  function build(offset = 0) {
+    slides.length = 0;
+    track.replaceChildren();
+    const count = mobile.matches ? 2 : 4;
+    const first = offset % logos.length;
+    let start = first;
+    do {
+      const slide = document.createElement('div');
+      slide.className = 'home-logo-slide';
+      slide.dataset.logoStart = start;
+      for (let i = 0; i < count; i++) {
+        const logo = logos[(start + i) % logos.length].cloneNode(true);
+        logo.querySelector('img').loading = 'eager';
+        slide.append(logo);
+      }
+      track.append(slide);
+      slides.push(slide);
+      start = (start + count) % logos.length;
+    } while (start !== first);
+    // Continue forwards seamlessly when the last slide wraps to the first.
+    const ending = slides[0].cloneNode(true);
+    ending.inert = true;
+    ending.setAttribute('aria-hidden', 'true');
+    track.append(ending);
+    carousel.replaceChildren(track);
+  }
   carousel.classList.add('is-carousel');
   const controls = document.createElement('div');
   controls.className = 'home-logo-controls';
@@ -67,6 +74,18 @@
     if (motion.matches) animation?.cancel();
     restart();
   });
+  mobile.addEventListener('change', () => {
+    const focused = carousel.contains(document.activeElement) ? document.activeElement.closest('a') : null;
+    const focusedIndex = focused ? logos.findIndex(logo => logo.href === focused.href) : -1;
+    const offset = focusedIndex >= 0 ? focusedIndex : Number(slides[current].dataset.logoStart);
+    animation?.cancel();
+    build(offset);
+    current = 0;
+    show(0);
+    if (focused) slides[0].querySelector('a').focus({ preventScroll: true });
+    restart();
+  });
+  build();
   show(0);
   restart();
 })();

@@ -1,6 +1,7 @@
 +++
 title = "Kris Kerremans invests €1 million in Striktly"
 weight = 2
+listingSummary = "The investment supported plans to develop and scale Striktly’s CRM, ERP and pre-accounting software."
 topic = "Portfolio news"
 sourceName = "Trends"
 sourceUrl = "https://trends.knack.be/ai-en-tech/technieuws/kris-kerremans-inuits-stopt-1-miljoen-in-striktly/"

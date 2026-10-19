@@ -1,8 +1,10 @@
 <footer class="footer">
 <div class="container">
 <div class="footer-brand">{{ partial "kerre/logo.html" (dict "light" true) }}</div>
+{{ if not (in (slice "approach" "contact") .Params.reference) }}
 <h2>Let's build what comes next.</h2>
 {{ partial "kerre/cta.html" (dict "action" "contact" "variant" "on-dark") }}
+{{ end }}
 <nav class="footer-pages" aria-label="Explore Kerre">
 {{ range hugo.Data.navigation }}
 <a href="{{ .url | relURL }}">{{ .label }}</a>

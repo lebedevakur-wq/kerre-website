@@ -1,6 +1,6 @@
 +++
 filterCategories = ["technology"]
-overview = "Open-source technology services."
+overview = "Open-source infrastructure and applications."
 industry = "Technology services"
 title = "Inuits"
 layout = "company"
@@ -16,4 +16,4 @@ Founded in Antwerp with a small team of IT professionals, Inuits grew into an in
 
 Beyond the company's own development, its expertise and network have contributed to other technology ventures and industry partnerships.
 
-Inuits remains central to my experience as a founder and to the way I think about building and scaling businesses.
+Kris Kerremans' experience as a co-founder of Inuits remains central to Kerre's approach to building and scaling businesses.

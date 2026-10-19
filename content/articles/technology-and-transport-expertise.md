@@ -1,6 +1,7 @@
 +++
 title = "Bringing technology and transport expertise together"
 weight = 1
+listingSummary = "Transport entrepreneur Kurt Joosen joined Inuits in 2025."
 topic = "Entrepreneurial perspectives"
 sourceName = "FLOWS"
 sourceUrl = "https://www.flows.be/mensen/2025/10/kris-kerremans-hijst-transporteur-kurt-joosen-aan-boord-bij-inuits/"

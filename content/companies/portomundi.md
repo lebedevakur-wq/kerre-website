@@ -16,4 +16,4 @@ Portomundi develops technology to help logistics terminals connect more effectiv
 
 The business also builds on technology associated with Cinvio, which developed digital wallet and payment solutions for business-to-business logistics transactions.
 
-My involvement with Portomundi reflects my continued commitment to improving the way logistics organisations interact, exchange information and manage their operations.
+Kerre's involvement with Portomundi reflects our continued commitment to improving the way logistics organisations interact, exchange information and manage their operations.

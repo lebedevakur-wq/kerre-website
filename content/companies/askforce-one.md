@@ -16,4 +16,4 @@ askforce.one focuses on making it easier for organisations to understand what pe
 
 The company reflects an important idea: better information enables better decisions, and better decisions create stronger organisations.
 
-Its focus on gathering meaningful input connects with my broader interest in the value of information sharing and collaborative improvement.
+Its focus on gathering meaningful input connects with our broader interest in the value of information sharing and collaborative improvement.

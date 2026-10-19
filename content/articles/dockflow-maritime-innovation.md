@@ -1,6 +1,7 @@
 +++
 title = "Backing maritime innovation with Dockflow"
 weight = 3
+listingSummary = "A minority investment backed plans to expand Dockflow’s customer base, maritime logistics features and team."
 topic = "Business-building insights"
 sourceName = "Bloovi"
 sourceUrl = "https://www.bloovi.be/artikels/ondernemersnieuws/2022/inuits-eigenaar-investeert-in-antwerpse-logistieke-start-up-dockflow"

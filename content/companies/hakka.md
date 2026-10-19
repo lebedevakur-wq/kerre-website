@@ -16,4 +16,4 @@ Hakka was developed as a digital collaboration platform to help container transp
 
 Building on the Eurotranscom concept, Hakka demonstrated how shared data and smarter technology could improve operational efficiency across an entire transport network.
 
-For me, Hakka represents a fundamental principle of entrepreneurship: meaningful innovation often comes from connecting people who face common challenges.
+For Kerre, Hakka represents a fundamental principle of entrepreneurship: meaningful innovation often comes from connecting people who face common challenges.

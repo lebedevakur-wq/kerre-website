@@ -1,6 +1,6 @@
 +++
 filterCategories = ["technology"]
-overview = "Integrated business software."
+overview = "Customer management, administration and workflows."
 industry = "Enterprise software"
 title = "Striktly"
 layout = "company"
@@ -14,6 +14,6 @@ website = "https://striktly.eu/"
 
 Striktly develops business software that brings together customer relationship management, enterprise resource planning and pre-accounting capabilities.
 
-In 2022, I invested €1 million in Striktly and became a minority shareholder, supporting the company's ambitions to develop and scale its offering.
+In 2022, Kris Kerremans invested €1 million in Striktly and became a minority shareholder, supporting the company's ambitions to develop and scale its offering.
 
-The investment reflects my belief in technology that makes business operations more efficient and gives entrepreneurs more time to focus on growth.
+The investment reflects our belief in technology that makes business operations more efficient and gives entrepreneurs more time to focus on growth.
