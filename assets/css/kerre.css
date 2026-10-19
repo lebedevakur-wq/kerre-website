@@ -450,7 +450,7 @@ img { display: block; max-width: 100%; }
 .investment-home .network-detail a { font-size: 16px; }
 .investment-home .network-geography-label { font-size: 17px; letter-spacing: .08em; }
 .investment-home .home-philosophy { --copy: var(--body); --muted: #667574; --focus: var(--ink); background: var(--paper); color: var(--ink); }
-.investment-home .philosophy-principle { display: block; border-color: var(--line); }
+.investment-home .philosophy-principle { display: block; border-color: #CCE8DD; }
 .investment-home .philosophy-number { color: var(--sage); font-size: 13px; }
 .investment-home .philosophy-principle h3 { font-size: clamp(26px, 2vw, 28px); }
 .investment-home .philosophy-cta { margin-top: 36px; }
